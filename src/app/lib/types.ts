@@ -1,6 +1,6 @@
-
-export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
-export type Status = 'draft' | 'ready' | 'published';
+export type Difficulty = "beginner" | "intermediate" | "advanced";
+export type Status = "draft" | "ready" | "published";
+export type PlanRequirement = "free" | "plus";
 
 export interface Hack {
   id: string;
@@ -12,6 +12,7 @@ export interface Hack {
   result: string;
   result_points: string[];
   tools: string[];
+  plan_requirement: PlanRequirement;
   category: string;
   tags: string[];
   difficulty: Difficulty;
@@ -27,6 +28,11 @@ export const difficultyLabels: Record<Difficulty, string> = {
   beginner: "初級",
   intermediate: "中級",
   advanced: "上級"
+};
+
+export const planRequirementLabels: Record<PlanRequirement, string> = {
+  free: "無料版対応",
+  plus: "Plus向け"
 };
 
 export const categories = [
