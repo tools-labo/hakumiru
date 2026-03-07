@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { HackCard } from "@/components/HackCard";
 import { Button } from "@/components/ui/button";
-import { Rocket, Sparkles, TrendingUp, ChevronRight, Search, FileText, Video } from "lucide-react";
+import { BrainCircuit, Rocket, Sparkles, TrendingUp, ChevronRight, Search, FileText, Video } from "lucide-react";
 import hacksData from "@/app/lib/hacks.json";
 import { Hack } from "@/app/lib/types";
 
