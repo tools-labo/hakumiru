@@ -10,12 +10,13 @@ export default function Home() {
   const featuredHacks = (hacksData as Hack[]).slice(0, 6);
 
   const categoriesList = [
-    { name: "仕事効率化", icon: <Rocket className="w-5 h-5" /> },
-    { name: "文章作成", icon: <FileText className="w-5 h-5" /> },
-    { name: "画像作成", icon: <Sparkles className="w-5 h-5" /> },
-    { name: "動画作成", icon: <Video className="w-5 h-5" /> },
-    { name: "副業・発信", icon: <TrendingUp className="w-5 h-5" /> },
-  ];
+  { name: "仕事効率化", icon: <Rocket className="w-5 h-5" /> },
+  { name: "文章作成", icon: <FileText className="w-5 h-5" /> },
+  { name: "画像作成", icon: <Sparkles className="w-5 h-5" /> },
+  { name: "動画作成", icon: <Video className="w-5 h-5" /> },
+  { name: "副業・発信", icon: <TrendingUp className="w-5 h-5" /> },
+  { name: "プログラミング・開発", icon: <BrainCircuit className="w-5 h-5" /> },
+];
 
   return (
     <div className="min-h-screen bg-slate-50/50 pb-20">
