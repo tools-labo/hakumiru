@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "ai-writing",
+      "description": "AI writing assistant",
+      "imageUrl": "https://picsum.photos/seed/ai-writing/600/400",
+      "imageHint": "AI writing"
+    },
+    {
+      "id": "ai-coding",
+      "description": "AI coding assistant",
+      "imageUrl": "https://picsum.photos/seed/ai-coding/600/400",
+      "imageHint": "AI coding"
+    },
+    {
+      "id": "ai-art",
+      "description": "AI generated art",
+      "imageUrl": "https://picsum.photos/seed/ai-art/600/400",
+      "imageHint": "AI art"
+    },
+    {
+      "id": "ai-data",
+      "description": "AI data analysis",
+      "imageUrl": "https://picsum.photos/seed/ai-data/600/400",
+      "imageHint": "AI data"
+    }
+  ]
+}
