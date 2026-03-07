@@ -1,6 +1,6 @@
 
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
-export type Status = 'ready' | 'draft';
+export type Status = 'draft' | 'ready' | 'published';
 
 export interface Hack {
   id: string;
