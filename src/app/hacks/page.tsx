@@ -8,11 +8,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter, X } from "lucide-react";
-import hacksData from "@/app/lib/hacks.json";
 import { Hack, categories } from "@/app/lib/types";
+import { getPublishedHacks } from "@/app/lib/hacks";
 
 export default function HacksListPage() {
   const searchParams = useSearchParams();
+  const publishedHacks = useMemo(() => getPublishedHacks(), []);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -38,7 +39,7 @@ export default function HacksListPage() {
   }, [searchParams]);
 
   const filteredHacks = useMemo(() => {
-    return (hacksData as Hack[]).filter((hack) => {
+    return publishedHacks.filter((hack: Hack) => {
       const matchesSearch =
         hack.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         hack.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -52,7 +53,7 @@ export default function HacksListPage() {
 
       return matchesSearch && matchesCategory && matchesDifficulty;
     });
-  }, [searchQuery, selectedCategory, selectedDifficulty]);
+  }, [publishedHacks, searchQuery, selectedCategory, selectedDifficulty]);
 
   const clearFilters = () => {
     setSearchQuery("");
@@ -155,7 +156,9 @@ export default function HacksListPage() {
               <Filter className="w-8 h-8" />
             </div>
             <h3 className="text-xl font-bold">該当するハックがありません</h3>
-            <p className="text-muted-foreground">検索条件を変更して再度お試しください</p>
+            <p className="text-muted-foreground">
+              公開済みハックがないか、検索条件に合うハックがありません
+            </p>
             <Button variant="link" onClick={clearFilters} className="font-bold">
               フィルターを全てリセット
             </Button>
