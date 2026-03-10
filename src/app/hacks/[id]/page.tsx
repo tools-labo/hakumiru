@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPublishedHackById } from "@/app/lib/hacks";
+import { getPublishedHackById, getPublishedHacks } from "@/app/lib/hacks";
 import { HackDetailClient } from "./HackDetailClient";
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateStaticParams() {
+  return getPublishedHacks().map((hack) => ({
+    id: hack.id,
+  }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
