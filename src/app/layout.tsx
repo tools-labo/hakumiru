@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/ogp.png",
+        url: "/ogp.PNG",
         width: 1200,
         height: 630,
         alt: "ハクミル | AI活用ハック",
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     title: "ハクミル | AI活用ハック",
     description:
       "ChatGPTなどのAIを実務や発信に活かすための実用ハックをまとめたサイトです。",
-    images: ["/ogp.png"],
+    images: ["/ogp.PNG"],
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-icon.png",
-    shortcut: "/favicon.ico",
+    icon: "/apple-icon.PNG",
+    apple: "/apple-icon.PNG",
+    shortcut: "/apple-icon.PNG",
   },
 };
 
