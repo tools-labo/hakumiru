@@ -16,7 +16,7 @@ import {
   Layout,
   BarChart2,
 } from "lucide-react";
-import { difficultyLabels } from "@/app/lib/types";
+import { difficultyLabels, planRequirementLabels } from "@/app/lib/types";
 import { getPublishedHackById } from "@/app/lib/hacks";
 
 export default function HackDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -73,6 +73,9 @@ export default function HackDetailPage({ params }: { params: Promise<{ id: strin
                   <BarChart2 className="w-3 h-3" />
                   {difficultyLabels[hack.difficulty]}
                 </div>
+                <Badge variant="outline" className="font-bold px-3 py-1 text-[11px]">
+                  {planRequirementLabels[hack.plan_requirement]}
+                </Badge>
               </div>
 
               <h1 className="text-2xl md:text-3xl font-black leading-tight mb-4 text-slate-900">
