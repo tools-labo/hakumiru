@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { HacksListClient } from "./HacksListClient";
 
 export const metadata: Metadata = {
@@ -20,5 +21,9 @@ export const metadata: Metadata = {
 };
 
 export default function HacksPage() {
-  return <HacksListClient />;
+  return (
+    <Suspense fallback={null}>
+      <HacksListClient />
+    </Suspense>
+  );
 }
