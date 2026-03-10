@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { HackCard } from "@/components/HackCard";
@@ -16,6 +16,8 @@ import {
   Calendar,
   Layout,
   BarChart2,
+  Share2,
+  ExternalLink,
 } from "lucide-react";
 import { difficultyLabels, planRequirementLabels } from "@/app/lib/types";
 import { getPublishedHackById, getRelatedHacks } from "@/app/lib/hacks";
@@ -23,16 +25,35 @@ import { getPublishedHackById, getRelatedHacks } from "@/app/lib/hacks";
 export function HackDetailClient({ id }: { id: string }) {
   const hack = getPublishedHackById(id);
   const relatedHacks = getRelatedHacks(id, 3);
-  const [copied, setCopied] = useState(false);
+  const [copiedPrompt, setCopiedPrompt] = useState(false);
+  const [copiedUrl, setCopiedUrl] = useState(false);
 
   if (!hack) {
     return null;
   }
 
-  const handleCopyPrompt = () => {
-    navigator.clipboard.writeText(hack.prompt);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const pageUrl = useMemo(() => {
+    if (typeof window === "undefined") {
+      return `/hacks/${hack.id}`;
+    }
+    return `${window.location.origin}/hacks/${hack.id}`;
+  }, [hack.id]);
+
+  const shareText = `${hack.title}｜ハクミル`;
+  const xShareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(
+    shareText
+  )}&url=${encodeURIComponent(pageUrl)}`;
+
+  const handleCopyPrompt = async () => {
+    await navigator.clipboard.writeText(hack.prompt);
+    setCopiedPrompt(true);
+    setTimeout(() => setCopiedPrompt(false), 2000);
+  };
+
+  const handleCopyUrl = async () => {
+    await navigator.clipboard.writeText(pageUrl);
+    setCopiedUrl(true);
+    setTimeout(() => setCopiedUrl(false), 2000);
   };
 
   const difficultyStyles = {
@@ -60,7 +81,9 @@ export function HackDetailClient({ id }: { id: string }) {
                 <Badge variant="secondary" className="font-bold px-3 py-1 bg-primary/5 text-primary border-primary/10">
                   {hack.category}
                 </Badge>
-                <div className={`px-3 py-1 rounded-full border text-[11px] font-bold flex items-center gap-1.5 ${difficultyStyles}`}>
+                <div
+                  className={`px-3 py-1 rounded-full border text-[11px] font-bold flex items-center gap-1.5 ${difficultyStyles}`}
+                >
                   <BarChart2 className="w-3 h-3" />
                   {difficultyLabels[hack.difficulty]}
                 </div>
@@ -72,9 +95,7 @@ export function HackDetailClient({ id }: { id: string }) {
               <h1 className="text-2xl md:text-3xl font-black leading-tight mb-4 text-slate-900">
                 {hack.title}
               </h1>
-              <p className="text-muted-foreground leading-relaxed">
-                {hack.summary}
-              </p>
+              <p className="text-muted-foreground leading-relaxed">{hack.summary}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 border-b">
@@ -134,7 +155,7 @@ export function HackDetailClient({ id }: { id: string }) {
               </section>
 
               <section className="space-y-4">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-3">
                   <h3 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">
                     プロンプト
                   </h3>
@@ -144,8 +165,8 @@ export function HackDetailClient({ id }: { id: string }) {
                     className="gap-2 font-bold h-8 px-3 text-xs border-primary/20 hover:bg-primary/5 hover:text-primary transition-all"
                     size="sm"
                   >
-                    {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                    {copied ? "コピー完了" : "コピーする"}
+                    {copiedPrompt ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                    {copiedPrompt ? "コピー完了" : "コピーする"}
                   </Button>
                 </div>
                 <div className="bg-slate-900 rounded-xl p-5 md:p-6 text-slate-100 font-mono text-sm leading-relaxed whitespace-pre-wrap shadow-inner border border-slate-800">
@@ -163,9 +184,7 @@ export function HackDetailClient({ id }: { id: string }) {
                       <div className="flex-shrink-0 w-6 h-6 bg-primary text-white rounded-md flex items-center justify-center font-black text-xs">
                         {index + 1}
                       </div>
-                      <div className="text-sm font-medium leading-relaxed text-slate-700">
-                        {step}
-                      </div>
+                      <div className="text-sm font-medium leading-relaxed text-slate-700">{step}</div>
                     </div>
                   ))}
                 </div>
@@ -188,6 +207,31 @@ export function HackDetailClient({ id }: { id: string }) {
                 </h3>
                 <div className="text-[13px] text-rose-900/70 leading-relaxed whitespace-pre-wrap">
                   {hack.caution}
+                </div>
+              </section>
+
+              <section className="pt-6 border-t space-y-4">
+                <h2 className="text-lg font-black flex items-center gap-2">
+                  <Share2 className="w-5 h-5" />
+                  共有
+                </h2>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button
+                    variant="outline"
+                    onClick={handleCopyUrl}
+                    className="gap-2 font-bold"
+                  >
+                    {copiedUrl ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                    {copiedUrl ? "URLをコピーしました" : "URLをコピー"}
+                  </Button>
+
+                  <Button asChild className="gap-2 font-bold">
+                    <a href={xShareUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4" />
+                      Xで共有
+                    </a>
+                  </Button>
                 </div>
               </section>
 
