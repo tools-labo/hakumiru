@@ -2,21 +2,29 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { HackCard } from "@/components/HackCard";
 import { Button } from "@/components/ui/button";
-import { BrainCircuit, Rocket, Sparkles, TrendingUp, ChevronRight, Search, FileText, Video } from "lucide-react";
-import hacksData from "@/app/lib/hacks.json";
-import { Hack } from "@/app/lib/types";
+import {
+  BrainCircuit,
+  Rocket,
+  Sparkles,
+  TrendingUp,
+  ChevronRight,
+  Search,
+  FileText,
+  Video,
+} from "lucide-react";
+import { getPublishedHacks } from "@/app/lib/hacks";
 
 export default function Home() {
-  const featuredHacks = (hacksData as Hack[]).slice(0, 6);
+  const featuredHacks = getPublishedHacks().slice(0, 6);
 
   const categoriesList = [
-  { name: "仕事効率化", icon: <Rocket className="w-5 h-5" /> },
-  { name: "文章作成", icon: <FileText className="w-5 h-5" /> },
-  { name: "画像作成", icon: <Sparkles className="w-5 h-5" /> },
-  { name: "動画作成", icon: <Video className="w-5 h-5" /> },
-  { name: "副業・発信", icon: <TrendingUp className="w-5 h-5" /> },
-  { name: "プログラミング・開発", icon: <BrainCircuit className="w-5 h-5" /> },
-];
+    { name: "仕事効率化", icon: <Rocket className="w-5 h-5" /> },
+    { name: "文章作成", icon: <FileText className="w-5 h-5" /> },
+    { name: "画像作成", icon: <Sparkles className="w-5 h-5" /> },
+    { name: "動画作成", icon: <Video className="w-5 h-5" /> },
+    { name: "副業・発信", icon: <TrendingUp className="w-5 h-5" /> },
+    { name: "プログラミング・開発", icon: <BrainCircuit className="w-5 h-5" /> },
+  ];
 
   return (
     <div className="min-h-screen bg-slate-50/50 pb-20">
@@ -39,7 +47,11 @@ export default function Home() {
             </div>
 
             <div className="max-w-xl mx-auto">
-              <Button size="lg" className="h-14 px-10 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all" asChild>
+              <Button
+                size="lg"
+                className="h-14 px-10 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
+                asChild
+              >
                 <Link href="/hacks" className="flex items-center gap-2">
                   <Search className="w-5 h-5" />
                   ハックを探す
@@ -52,8 +64,13 @@ export default function Home() {
 
       <section className="container mx-auto px-4 py-16 max-w-6xl">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">カテゴリー</h2>
-          <Link href="/hacks" className="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+          <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
+            カテゴリー
+          </h2>
+          <Link
+            href="/hacks"
+            className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
+          >
             全て見る <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
@@ -73,22 +90,36 @@ export default function Home() {
 
       <section className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">最新のハック</h2>
-          <Link href="/hacks" className="text-sm font-bold text-primary hover:underline flex items-center gap-1">
+          <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
+            最新のハック
+          </h2>
+          <Link
+            href="/hacks"
+            className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
+          >
             全てのハックを表示 <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredHacks.map((hack) => (
-            <HackCard key={hack.id} hack={hack} />
-          ))}
-        </div>
 
-        <div className="mt-16 text-center">
-          <Button variant="outline" size="lg" className="rounded-full px-12 border-2 font-bold" asChild>
-            <Link href="/hacks">ハック一覧をもっと見る</Link>
-          </Button>
-        </div>
+        {featuredHacks.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {featuredHacks.map((hack) => (
+                <HackCard key={hack.id} hack={hack} />
+              ))}
+            </div>
+
+            <div className="mt-16 text-center">
+              <Button variant="outline" size="lg" className="rounded-full px-12 border-2 font-bold" asChild>
+                <Link href="/hacks">ハック一覧をもっと見る</Link>
+              </Button>
+            </div>
+          </>
+        ) : (
+          <div className="bg-white rounded-2xl border p-10 text-center text-muted-foreground">
+            公開中のハックはまだありません
+          </div>
+        )}
       </section>
     </div>
   );
