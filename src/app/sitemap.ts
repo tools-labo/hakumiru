@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getPublishedHacks } from "@/app/lib/hacks";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://hakumiru.com";
+  const baseUrl = "https://hakumiru.tools-labo.com";
   const publishedHacks = getPublishedHacks();
 
   const staticPages: MetadataRoute.Sitemap = [
