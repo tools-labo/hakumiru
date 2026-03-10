@@ -31,8 +31,8 @@ export const difficultyLabels: Record<Difficulty, string> = {
 };
 
 export const planRequirementLabels: Record<PlanRequirement, string> = {
-  free: "無料版対応",
-  plus: "Plus向け"
+  free: "無料版",
+  plus: "Plus"
 };
 
 export const categories = [
