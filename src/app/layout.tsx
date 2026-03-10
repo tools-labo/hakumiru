@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 
@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   },
   description:
     "ハクミルは、ChatGPTなどのAIを実務や発信に活かすための実用ハックをまとめたサイトです。プロンプト、ワークフロー、再利用しやすい運用例を探せます。",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "ハクミル",
+  },
   openGraph: {
     title: "ハクミル | AI活用ハック",
     description:
@@ -39,6 +45,10 @@ export const metadata: Metadata = {
     apple: "/apple-icon.PNG",
     shortcut: "/apple-icon.PNG",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#5B3CC4",
 };
 
 export default function RootLayout({
