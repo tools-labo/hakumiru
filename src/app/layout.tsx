@@ -3,7 +3,7 @@ import "./globals.css";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hakumiru.com"),
+  metadataBase: new URL("https://hakumiru.tools-labo.com"),
   title: {
     default: "ハクミル | AI活用ハック",
     template: "%s | ハクミル",
