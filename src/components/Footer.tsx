@@ -48,6 +48,16 @@ export function Footer() {
               <h2 className="text-sm font-black mb-3">運営情報</h2>
               <div className="space-y-2 text-sm">
                 <div>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfF73yZ69HH-FASKEYSkp98zM92o4dtQLtiQs7BzLRuwsobfA/viewform?pli=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    お問い合わせ
+                  </a>
+                </div>
+                <div>
                   <Link
                     href="/privacy-policy"
                     className="text-muted-foreground hover:text-primary transition-colors"
