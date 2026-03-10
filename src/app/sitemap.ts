@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getPublishedHacks } from "@/app/lib/hacks";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://hakumiru.tools-labo.com";
   const publishedHacks = getPublishedHacks();
