@@ -3,6 +3,7 @@
 import { use, useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
+import { HackCard } from "@/components/HackCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -17,11 +18,12 @@ import {
   BarChart2,
 } from "lucide-react";
 import { difficultyLabels, planRequirementLabels } from "@/app/lib/types";
-import { getPublishedHackById } from "@/app/lib/hacks";
+import { getPublishedHackById, getRelatedHacks } from "@/app/lib/hacks";
 
 export default function HackDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const hack = getPublishedHackById(id);
+  const relatedHacks = getRelatedHacks(id, 3);
   const [copied, setCopied] = useState(false);
 
   if (!hack) {
@@ -214,6 +216,17 @@ export default function HackDetailPage({ params }: { params: Promise<{ id: strin
                   ))}
                 </div>
               </div>
+
+              {relatedHacks.length > 0 && (
+                <section className="pt-6 border-t space-y-4">
+                  <h2 className="text-lg font-black">関連ハック</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {relatedHacks.map((relatedHack) => (
+                      <HackCard key={relatedHack.id} hack={relatedHack} />
+                    ))}
+                  </div>
+                </section>
+              )}
             </div>
           </div>
 
