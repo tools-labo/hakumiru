@@ -3,13 +3,12 @@ export type Status = "draft" | "ready" | "published";
 export type PlanRequirement = "free" | "plus";
 
 export type UseCase =
-  | "make_money"
-  | "social_publish"
   | "write_blog_note"
-  | "make_video"
-  | "make_image"
+  | "make_money"
   | "research_compare"
-  | "organize_info";
+  | "organize_info"
+  | "social_publish"
+  | "creative";
 
 export interface Hack {
   id: string;
@@ -47,23 +46,21 @@ export const planRequirementLabels: Record<PlanRequirement, string> = {
 };
 
 export const useCaseLabels: Record<UseCase, string> = {
-  make_money: "AIで稼ぎたい",
-  social_publish: "SNSや発信に使う",
   write_blog_note: "ブログやnoteを書く",
-  make_video: "動画を作る",
-  make_image: "画像を作る",
+  make_money: "AIで稼ぎたい",
   research_compare: "調べて比較する",
-  organize_info: "メモや情報を整理する"
+  organize_info: "メモや情報を整理する",
+  social_publish: "SNSや発信に使う",
+  creative: "クリエイティブに使う"
 };
 
 export const useCaseOrder: UseCase[] = [
-  "make_money",
-  "social_publish",
   "write_blog_note",
-  "make_video",
-  "make_image",
+  "make_money",
   "research_compare",
-  "organize_info"
+  "organize_info",
+  "social_publish",
+  "creative"
 ];
 
 export const categories = [
