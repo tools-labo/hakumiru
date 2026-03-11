@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Hack, difficultyLabels } from "@/app/lib/types";
+import { Hack, difficultyLabels, goalLabels } from "@/app/lib/types";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tag, BarChart2 } from "lucide-react";
@@ -37,6 +37,12 @@ export function HackCard({ hack }: HackCardProps) {
               <BarChart2 className="w-3 h-3" />
               {difficultyLabels[hack.difficulty]}
             </div>
+          </div>
+
+          <div className="mb-2">
+            <span className="inline-flex items-center rounded-full bg-secondary px-2.5 py-1 text-[10px] font-bold text-muted-foreground">
+              {goalLabels[hack.goal]}
+            </span>
           </div>
 
           <h3 className="text-lg font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2">
