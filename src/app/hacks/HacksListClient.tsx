@@ -98,6 +98,12 @@ export function HacksListClient() {
     setSelectedDifficulty("all");
   };
 
+  const useCaseRows: UseCase[][] = [
+    ["write_blog_note", "make_money", "social_publish"],
+    ["research_compare", "creative"],
+    ["organize_info"],
+  ];
+
   return (
     <div className="min-h-screen bg-background pb-20">
       <Header />
@@ -118,27 +124,57 @@ export function HacksListClient() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              <Button
-                type="button"
-                variant={selectedUseCase === "all" ? "default" : "outline"}
-                className="h-11 rounded-full font-bold justify-center px-4 whitespace-normal text-center leading-tight"
-                onClick={() => setSelectedUseCase("all")}
-              >
-                すべて
-              </Button>
-
-              {useCaseOrder.map((useCase) => (
+            <div className="space-y-2">
+              <div className="flex flex-wrap gap-2">
                 <Button
-                  key={useCase}
                   type="button"
-                  variant={selectedUseCase === useCase ? "default" : "outline"}
-                  className="h-11 rounded-full font-bold justify-center px-4 whitespace-normal text-center leading-tight"
-                  onClick={() => setSelectedUseCase(useCase)}
+                  variant={selectedUseCase === "all" ? "default" : "outline"}
+                  className="rounded-full h-10 px-5 font-bold text-sm"
+                  onClick={() => setSelectedUseCase("all")}
                 >
-                  {useCaseLabels[useCase]}
+                  すべて
                 </Button>
-              ))}
+
+                {useCaseRows[0].map((useCase) => (
+                  <Button
+                    key={useCase}
+                    type="button"
+                    variant={selectedUseCase === useCase ? "default" : "outline"}
+                    className="rounded-full h-10 px-5 font-bold text-sm"
+                    onClick={() => setSelectedUseCase(useCase)}
+                  >
+                    {useCaseLabels[useCase]}
+                  </Button>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {useCaseRows[1].map((useCase) => (
+                  <Button
+                    key={useCase}
+                    type="button"
+                    variant={selectedUseCase === useCase ? "default" : "outline"}
+                    className="rounded-full h-10 px-5 font-bold text-sm"
+                    onClick={() => setSelectedUseCase(useCase)}
+                  >
+                    {useCaseLabels[useCase]}
+                  </Button>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {useCaseRows[2].map((useCase) => (
+                  <Button
+                    key={useCase}
+                    type="button"
+                    variant={selectedUseCase === useCase ? "default" : "outline"}
+                    className="rounded-full h-10 px-5 font-bold text-sm"
+                    onClick={() => setSelectedUseCase(useCase)}
+                  >
+                    {useCaseLabels[useCase]}
+                  </Button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
