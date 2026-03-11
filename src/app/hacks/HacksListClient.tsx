@@ -14,7 +14,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Search, Filter, X } from "lucide-react";
-import { Hack, categories, goals, goalLabels, Goal } from "@/app/lib/types";
+import {
+  Hack,
+  categories,
+  useCaseLabels,
+  useCaseOrder,
+  UseCase,
+} from "@/app/lib/types";
 import { getPublishedHacks } from "@/app/lib/hacks";
 
 export function HacksListClient() {
@@ -22,19 +28,19 @@ export function HacksListClient() {
   const publishedHacks = useMemo(() => getPublishedHacks(), []);
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedGoal, setSelectedGoal] = useState<Goal | "all">("all");
+  const [selectedUseCase, setSelectedUseCase] = useState<UseCase | "all">("all");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
 
   useEffect(() => {
-    const goalParam = searchParams.get("goal");
+    const useCaseParam = searchParams.get("use_case");
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
 
-    if (goalParam && goals.includes(goalParam as Goal)) {
-      setSelectedGoal(goalParam as Goal);
+    if (useCaseParam && useCaseOrder.includes(useCaseParam as UseCase)) {
+      setSelectedUseCase(useCaseParam as UseCase);
     } else {
-      setSelectedGoal("all");
+      setSelectedUseCase("all");
     }
 
     if (categoryParam && categories.includes(categoryParam)) {
@@ -59,7 +65,10 @@ export function HacksListClient() {
         hack.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
         hack.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
 
-      const matchesGoal = selectedGoal === "all" || hack.goal === selectedGoal;
+      const matchesUseCase =
+        selectedUseCase === "all" ||
+        hack.primary_use_case === selectedUseCase ||
+        hack.use_cases.includes(selectedUseCase as UseCase);
 
       const matchesCategory =
         selectedCategory === "all" || hack.category === selectedCategory;
@@ -69,16 +78,22 @@ export function HacksListClient() {
 
       return (
         matchesSearch &&
-        matchesGoal &&
+        matchesUseCase &&
         matchesCategory &&
         matchesDifficulty
       );
     });
-  }, [publishedHacks, searchQuery, selectedGoal, selectedCategory, selectedDifficulty]);
+  }, [
+    publishedHacks,
+    searchQuery,
+    selectedUseCase,
+    selectedCategory,
+    selectedDifficulty,
+  ]);
 
   const clearFilters = () => {
     setSearchQuery("");
-    setSelectedGoal("all");
+    setSelectedUseCase("all");
     setSelectedCategory("all");
     setSelectedDifficulty("all");
   };
@@ -106,22 +121,22 @@ export function HacksListClient() {
             <div className="flex flex-wrap gap-2">
               <Button
                 type="button"
-                variant={selectedGoal === "all" ? "default" : "outline"}
+                variant={selectedUseCase === "all" ? "default" : "outline"}
                 className="rounded-full font-bold"
-                onClick={() => setSelectedGoal("all")}
+                onClick={() => setSelectedUseCase("all")}
               >
                 すべて
               </Button>
 
-              {goals.map((goal) => (
+              {useCaseOrder.map((useCase) => (
                 <Button
-                  key={goal}
+                  key={useCase}
                   type="button"
-                  variant={selectedGoal === goal ? "default" : "outline"}
+                  variant={selectedUseCase === useCase ? "default" : "outline"}
                   className="rounded-full font-bold"
-                  onClick={() => setSelectedGoal(goal)}
+                  onClick={() => setSelectedUseCase(useCase)}
                 >
-                  {goalLabels[goal]}
+                  {useCaseLabels[useCase]}
                 </Button>
               ))}
             </div>
