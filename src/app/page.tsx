@@ -77,11 +77,11 @@ export default function Home() {
                 ハクミル｜AI活用ハック
               </p>
               <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight">
-                AIを、<span className="text-primary">もっと賢く</span>使いこなす。
+                AIの使い方が<span className="text-primary">みつかる</span>ハック集。
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                プロンプト、ワークフロー、自動化テクニック。<br className="hidden md:block" />
-                実用的なAI活用ハックを探せるサイト。
+                何を入力して、どう使い、何ができるか。<br className="hidden md:block" />
+                プロンプトと手順つきで、ChatGPTなどのAIの使い方を探せるサイトです。
               </p>
             </div>
 
