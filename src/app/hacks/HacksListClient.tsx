@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Search, Filter, X } from "lucide-react";
-import { Hack, categories } from "@/app/lib/types";
+import { Hack, categories, goals, goalLabels, Goal } from "@/app/lib/types";
 import { getPublishedHacks } from "@/app/lib/hacks";
 
 export function HacksListClient() {
@@ -22,12 +22,20 @@ export function HacksListClient() {
   const publishedHacks = useMemo(() => getPublishedHacks(), []);
 
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedGoal, setSelectedGoal] = useState<Goal | "all">("all");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
 
   useEffect(() => {
+    const goalParam = searchParams.get("goal");
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
+
+    if (goalParam && goals.includes(goalParam as Goal)) {
+      setSelectedGoal(goalParam as Goal);
+    } else {
+      setSelectedGoal("all");
+    }
 
     if (categoryParam && categories.includes(categoryParam)) {
       setSelectedCategory(categoryParam);
@@ -51,18 +59,26 @@ export function HacksListClient() {
         hack.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
         hack.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
 
+      const matchesGoal = selectedGoal === "all" || hack.goal === selectedGoal;
+
       const matchesCategory =
         selectedCategory === "all" || hack.category === selectedCategory;
 
       const matchesDifficulty =
         selectedDifficulty === "all" || hack.difficulty === selectedDifficulty;
 
-      return matchesSearch && matchesCategory && matchesDifficulty;
+      return (
+        matchesSearch &&
+        matchesGoal &&
+        matchesCategory &&
+        matchesDifficulty
+      );
     });
-  }, [publishedHacks, searchQuery, selectedCategory, selectedDifficulty]);
+  }, [publishedHacks, searchQuery, selectedGoal, selectedCategory, selectedDifficulty]);
 
   const clearFilters = () => {
     setSearchQuery("");
+    setSelectedGoal("all");
     setSelectedCategory("all");
     setSelectedDifficulty("all");
   };
@@ -77,6 +93,39 @@ export function HacksListClient() {
             AIハック一覧
           </h1>
           <p className="text-muted-foreground">条件に合うテクニックを見つけましょう</p>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm border p-4 md:p-6 mb-6">
+          <div className="space-y-3">
+            <div>
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+                やりたいこと
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              <Button
+                type="button"
+                variant={selectedGoal === "all" ? "default" : "outline"}
+                className="rounded-full font-bold"
+                onClick={() => setSelectedGoal("all")}
+              >
+                すべて
+              </Button>
+
+              {goals.map((goal) => (
+                <Button
+                  key={goal}
+                  type="button"
+                  variant={selectedGoal === goal ? "default" : "outline"}
+                  className="rounded-full font-bold"
+                  onClick={() => setSelectedGoal(goal)}
+                >
+                  {goalLabels[goal]}
+                </Button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border p-4 md:p-6 mb-8">
