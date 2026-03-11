@@ -118,11 +118,11 @@ export function HacksListClient() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
               <Button
                 type="button"
                 variant={selectedUseCase === "all" ? "default" : "outline"}
-                className="rounded-full font-bold"
+                className="h-11 rounded-full font-bold justify-center px-4 whitespace-normal text-center leading-tight"
                 onClick={() => setSelectedUseCase("all")}
               >
                 すべて
@@ -133,7 +133,7 @@ export function HacksListClient() {
                   key={useCase}
                   type="button"
                   variant={selectedUseCase === useCase ? "default" : "outline"}
-                  className="rounded-full font-bold"
+                  className="h-11 rounded-full font-bold justify-center px-4 whitespace-normal text-center leading-tight"
                   onClick={() => setSelectedUseCase(useCase)}
                 >
                   {useCaseLabels[useCase]}
