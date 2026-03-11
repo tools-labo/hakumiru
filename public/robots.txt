@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hakumiru.tools-labo.com/sitemap.xml
