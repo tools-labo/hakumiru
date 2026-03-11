@@ -11,11 +11,55 @@ import {
   Search,
   FileText,
   Video,
+  PenSquare,
+  Wallet,
+  Image as ImageIcon,
+  FolderSearch,
+  NotebookPen,
+  Megaphone,
 } from "lucide-react";
 import { getPublishedHacks } from "@/app/lib/hacks";
 
 export default function Home() {
   const featuredHacks = getPublishedHacks().slice(0, 6);
+
+  const useCaseList = [
+    {
+      key: "make_money",
+      name: "AIで稼ぎたい",
+      icon: <Wallet className="w-5 h-5" />,
+    },
+    {
+      key: "social_publish",
+      name: "SNSや発信に使う",
+      icon: <Megaphone className="w-5 h-5" />,
+    },
+    {
+      key: "write_blog_note",
+      name: "ブログやnoteを書く",
+      icon: <PenSquare className="w-5 h-5" />,
+    },
+    {
+      key: "make_video",
+      name: "動画を作る",
+      icon: <Video className="w-5 h-5" />,
+    },
+    {
+      key: "make_image",
+      name: "画像を作る",
+      icon: <ImageIcon className="w-5 h-5" />,
+    },
+    {
+      key: "research_compare",
+      name: "調べて比較する",
+      icon: <FolderSearch className="w-5 h-5" />,
+    },
+    {
+      key: "organize_info",
+      name: "メモや情報を整理する",
+      icon: <NotebookPen className="w-5 h-5" />,
+    },
+  ];
 
   const categoriesList = [
     { name: "仕事効率化", icon: <Rocket className="w-5 h-5" /> },
@@ -65,6 +109,33 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 max-w-6xl">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
+            やりたいことから探す
+          </h2>
+          <Link
+            href="/hacks"
+            className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
+          >
+            一覧を見る <ChevronRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {useCaseList.map((item) => (
+            <Link key={item.key} href={`/hacks?use_case=${item.key}`}>
+              <div className="bg-white p-6 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center">
+                <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className="font-bold text-sm leading-snug">{item.name}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-4 max-w-6xl">
+        <div className="flex items-center justify-between mb-10">
+          <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
             カテゴリー
           </h2>
           <Link
@@ -74,14 +145,14 @@ export default function Home() {
             全て見る <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {categoriesList.map((cat) => (
             <Link key={cat.name} href={`/hacks?category=${cat.name}`}>
               <div className="bg-white p-6 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center">
                 <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                   {cat.icon}
                 </div>
-                <h3 className="font-bold text-sm mb-1">{cat.name}</h3>
+                <h3 className="font-bold text-sm mb-1 leading-snug">{cat.name}</h3>
               </div>
             </Link>
           ))}
