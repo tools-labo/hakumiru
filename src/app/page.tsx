@@ -13,10 +13,10 @@ import {
   Video,
   PenSquare,
   Wallet,
-  Image as ImageIcon,
   FolderSearch,
   NotebookPen,
   Megaphone,
+  Palette,
 } from "lucide-react";
 import { getPublishedHacks } from "@/app/lib/hacks";
 
@@ -25,29 +25,14 @@ export default function Home() {
 
   const useCaseList = [
     {
-      key: "make_money",
-      name: "AIで稼ぎたい",
-      icon: <Wallet className="w-5 h-5" />,
-    },
-    {
-      key: "social_publish",
-      name: "SNSや発信に使う",
-      icon: <Megaphone className="w-5 h-5" />,
-    },
-    {
       key: "write_blog_note",
       name: "ブログやnoteを書く",
       icon: <PenSquare className="w-5 h-5" />,
     },
     {
-      key: "make_video",
-      name: "動画を作る",
-      icon: <Video className="w-5 h-5" />,
-    },
-    {
-      key: "make_image",
-      name: "画像を作る",
-      icon: <ImageIcon className="w-5 h-5" />,
+      key: "make_money",
+      name: "AIで稼ぎたい",
+      icon: <Wallet className="w-5 h-5" />,
     },
     {
       key: "research_compare",
@@ -58,6 +43,16 @@ export default function Home() {
       key: "organize_info",
       name: "メモや情報を整理する",
       icon: <NotebookPen className="w-5 h-5" />,
+    },
+    {
+      key: "social_publish",
+      name: "SNSや発信に使う",
+      icon: <Megaphone className="w-5 h-5" />,
+    },
+    {
+      key: "make_image",
+      name: "クリエイティブに使う",
+      icon: <Palette className="w-5 h-5" />,
     },
   ];
 
@@ -119,7 +114,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {useCaseList.map((item) => (
             <Link key={item.key} href={`/hacks?use_case=${item.key}`}>
               <div className="bg-white p-6 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center">
