@@ -18,10 +18,15 @@ import {
   Hack,
   categories,
   useCaseLabels,
-  useCaseOrder,
   UseCase,
 } from "@/app/lib/types";
 import { getPublishedHacks } from "@/app/lib/hacks";
+
+const mobileUseCaseRows: UseCase[][] = [
+  ["make_money", "social_publish"],
+  ["write_blog_note", "creative"],
+  ["organize_info", "research_compare"],
+];
 
 export function HacksListClient() {
   const searchParams = useSearchParams();
@@ -37,7 +42,16 @@ export function HacksListClient() {
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
 
-    if (useCaseParam && useCaseOrder.includes(useCaseParam as UseCase)) {
+    const validUseCases: UseCase[] = [
+      "write_blog_note",
+      "make_money",
+      "research_compare",
+      "organize_info",
+      "social_publish",
+      "creative",
+    ];
+
+    if (useCaseParam && validUseCases.includes(useCaseParam as UseCase)) {
       setSelectedUseCase(useCaseParam as UseCase);
     } else {
       setSelectedUseCase("all");
@@ -118,75 +132,63 @@ export function HacksListClient() {
               </p>
             </div>
 
-            <div className="space-y-2.5">
-              <div className="grid grid-cols-3 gap-2">
-                <Button
-                  type="button"
-                  variant={selectedUseCase === "all" ? "default" : "outline"}
-                  className="rounded-full h-11 px-3 font-bold text-sm"
-                  onClick={() => setSelectedUseCase("all")}
-                >
-                  すべて
-                </Button>
+            <div className="space-y-2 md:hidden">
+              <Button
+                type="button"
+                variant={selectedUseCase === "all" ? "default" : "outline"}
+                className="w-full rounded-full font-bold h-11"
+                onClick={() => setSelectedUseCase("all")}
+              >
+                すべて
+              </Button>
 
-                <Button
-                  type="button"
-                  variant={selectedUseCase === "make_money" ? "default" : "outline"}
-                  className="rounded-full h-11 px-3 font-bold text-sm"
-                  onClick={() => setSelectedUseCase("make_money")}
-                >
-                  AIで稼ぎたい
-                </Button>
+              {mobileUseCaseRows.map((row, rowIndex) => (
+                <div key={rowIndex} className="grid grid-cols-2 gap-2">
+                  {row.map((useCase) => (
+                    <Button
+                      key={useCase}
+                      type="button"
+                      variant={selectedUseCase === useCase ? "default" : "outline"}
+                      className="w-full rounded-full font-bold h-11 px-3 text-sm whitespace-normal leading-tight"
+                      onClick={() => setSelectedUseCase(useCase)}
+                    >
+                      {useCaseLabels[useCase]}
+                    </Button>
+                  ))}
+                </div>
+              ))}
+            </div>
 
-                <Button
-                  type="button"
-                  variant={selectedUseCase === "social_publish" ? "default" : "outline"}
-                  className="rounded-full h-11 px-3 font-bold text-sm"
-                  onClick={() => setSelectedUseCase("social_publish")}
-                >
-                  SNSや発信に使う
-                </Button>
-              </div>
+            <div className="hidden md:flex md:flex-wrap md:gap-2">
+              <Button
+                type="button"
+                variant={selectedUseCase === "all" ? "default" : "outline"}
+                className="rounded-full font-bold"
+                onClick={() => setSelectedUseCase("all")}
+              >
+                すべて
+              </Button>
 
-              <div className="grid grid-cols-2 gap-2">
+              {(
+                [
+                  "write_blog_note",
+                  "make_money",
+                  "research_compare",
+                  "organize_info",
+                  "social_publish",
+                  "creative",
+                ] as UseCase[]
+              ).map((useCase) => (
                 <Button
+                  key={useCase}
                   type="button"
-                  variant={selectedUseCase === "write_blog_note" ? "default" : "outline"}
-                  className="rounded-full h-11 px-3 font-bold text-sm"
-                  onClick={() => setSelectedUseCase("write_blog_note")}
+                  variant={selectedUseCase === useCase ? "default" : "outline"}
+                  className="rounded-full font-bold"
+                  onClick={() => setSelectedUseCase(useCase)}
                 >
-                  ブログやnoteを書く
+                  {useCaseLabels[useCase]}
                 </Button>
-
-                <Button
-                  type="button"
-                  variant={selectedUseCase === "creative" ? "default" : "outline"}
-                  className="rounded-full h-11 px-3 font-bold text-sm"
-                  onClick={() => setSelectedUseCase("creative")}
-                >
-                  クリエイティブに使う
-                </Button>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2">
-                <Button
-                  type="button"
-                  variant={selectedUseCase === "organize_info" ? "default" : "outline"}
-                  className="rounded-full h-11 px-3 font-bold text-sm"
-                  onClick={() => setSelectedUseCase("organize_info")}
-                >
-                  メモや情報を整理する
-                </Button>
-
-                <Button
-                  type="button"
-                  variant={selectedUseCase === "research_compare" ? "default" : "outline"}
-                  className="rounded-full h-11 px-3 font-bold text-sm"
-                  onClick={() => setSelectedUseCase("research_compare")}
-                >
-                  調べて比較する
-                </Button>
-              </div>
+              ))}
             </div>
           </div>
         </div>
