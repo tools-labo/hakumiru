@@ -28,6 +28,15 @@ const mobileUseCaseRows: UseCase[][] = [
   ["organize_info", "research_compare"],
 ];
 
+const validUseCases: UseCase[] = [
+  "write_blog_note",
+  "make_money",
+  "research_compare",
+  "organize_info",
+  "social_publish",
+  "creative",
+];
+
 export function HacksListClient() {
   const searchParams = useSearchParams();
   const publishedHacks = useMemo(() => getPublishedHacks(), []);
@@ -41,15 +50,6 @@ export function HacksListClient() {
     const useCaseParam = searchParams.get("use_case");
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
-
-    const validUseCases: UseCase[] = [
-      "write_blog_note",
-      "make_money",
-      "research_compare",
-      "organize_info",
-      "social_publish",
-      "creative",
-    ];
 
     if (useCaseParam && validUseCases.includes(useCaseParam as UseCase)) {
       setSelectedUseCase(useCaseParam as UseCase);
@@ -136,7 +136,7 @@ export function HacksListClient() {
               <Button
                 type="button"
                 variant={selectedUseCase === "all" ? "default" : "outline"}
-                className="w-full rounded-full font-bold h-11"
+                className="w-full rounded-full h-10 text-sm font-semibold"
                 onClick={() => setSelectedUseCase("all")}
               >
                 すべて
@@ -149,7 +149,7 @@ export function HacksListClient() {
                       key={useCase}
                       type="button"
                       variant={selectedUseCase === useCase ? "default" : "outline"}
-                      className="w-full rounded-full font-bold h-11 px-3 text-sm whitespace-normal leading-tight"
+                      className="w-full rounded-full h-11 px-3 text-[13px] font-semibold whitespace-nowrap leading-none"
                       onClick={() => setSelectedUseCase(useCase)}
                     >
                       {useCaseLabels[useCase]}
@@ -163,27 +163,18 @@ export function HacksListClient() {
               <Button
                 type="button"
                 variant={selectedUseCase === "all" ? "default" : "outline"}
-                className="rounded-full font-bold"
+                className="rounded-full h-10 text-sm font-semibold"
                 onClick={() => setSelectedUseCase("all")}
               >
                 すべて
               </Button>
 
-              {(
-                [
-                  "write_blog_note",
-                  "make_money",
-                  "research_compare",
-                  "organize_info",
-                  "social_publish",
-                  "creative",
-                ] as UseCase[]
-              ).map((useCase) => (
+              {validUseCases.map((useCase) => (
                 <Button
                   key={useCase}
                   type="button"
                   variant={selectedUseCase === useCase ? "default" : "outline"}
-                  className="rounded-full font-bold"
+                  className="rounded-full h-11 text-sm font-semibold whitespace-nowrap"
                   onClick={() => setSelectedUseCase(useCase)}
                 >
                   {useCaseLabels[useCase]}
