@@ -2,14 +2,14 @@ export type Difficulty = "beginner" | "intermediate" | "advanced";
 export type Status = "draft" | "ready" | "published";
 export type PlanRequirement = "free" | "plus";
 
-export type Goal =
-  | "earn_with_ai"
-  | "social_and_promotion"
-  | "blog_and_note"
-  | "make_videos"
-  | "make_images"
-  | "research_and_compare"
-  | "organize_notes_and_info";
+export type UseCase =
+  | "make_money"
+  | "social_publish"
+  | "write_blog_note"
+  | "make_video"
+  | "make_image"
+  | "research_compare"
+  | "organize_info";
 
 export interface Hack {
   id: string;
@@ -25,7 +25,8 @@ export interface Hack {
   category: string;
   tags: string[];
   difficulty: Difficulty;
-  goal: Goal;
+  primary_use_case: UseCase;
+  use_cases: UseCase[];
   prompt: string;
   steps: string[];
   caution: string;
@@ -37,13 +38,33 @@ export interface Hack {
 export const difficultyLabels: Record<Difficulty, string> = {
   beginner: "初級",
   intermediate: "中級",
-  advanced: "上級",
+  advanced: "上級"
 };
 
 export const planRequirementLabels: Record<PlanRequirement, string> = {
   free: "無料版",
-  plus: "Plus",
+  plus: "Plus"
 };
+
+export const useCaseLabels: Record<UseCase, string> = {
+  make_money: "AIで稼ぎたい",
+  social_publish: "SNSや発信に使う",
+  write_blog_note: "ブログやnoteを書く",
+  make_video: "動画を作る",
+  make_image: "画像を作る",
+  research_compare: "調べて比較する",
+  organize_info: "メモや情報を整理する"
+};
+
+export const useCaseOrder: UseCase[] = [
+  "make_money",
+  "social_publish",
+  "write_blog_note",
+  "make_video",
+  "make_image",
+  "research_compare",
+  "organize_info"
+];
 
 export const categories = [
   "文章作成",
@@ -51,25 +72,5 @@ export const categories = [
   "動画作成",
   "仕事効率化",
   "副業・発信",
-  "プログラミング・開発",
+  "プログラミング・開発"
 ];
-
-export const goals: Goal[] = [
-  "earn_with_ai",
-  "social_and_promotion",
-  "blog_and_note",
-  "make_videos",
-  "make_images",
-  "research_and_compare",
-  "organize_notes_and_info",
-];
-
-export const goalLabels: Record<Goal, string> = {
-  earn_with_ai: "AIで稼ぎたい",
-  social_and_promotion: "SNSや発信に使う",
-  blog_and_note: "ブログやnoteを書く",
-  make_videos: "動画を作る",
-  make_images: "画像を作る",
-  research_and_compare: "調べて比較する",
-  organize_notes_and_info: "メモや情報を整理する",
-};
