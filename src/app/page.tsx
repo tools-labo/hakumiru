@@ -50,7 +50,7 @@ export default function Home() {
       icon: <Megaphone className="w-5 h-5" />,
     },
     {
-      key: "make_image",
+      key: "creative",
       name: "クリエイティブに使う",
       icon: <Palette className="w-5 h-5" />,
     },
@@ -176,7 +176,12 @@ export default function Home() {
             </div>
 
             <div className="mt-16 text-center">
-              <Button variant="outline" size="lg" className="rounded-full px-12 border-2 font-bold" asChild>
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-full px-12 border-2 font-bold"
+                asChild
+              >
                 <Link href="/hacks">ハック一覧をもっと見る</Link>
               </Button>
             </div>
