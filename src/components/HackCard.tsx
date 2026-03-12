@@ -1,13 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { Hack, difficultyLabels } from "@/app/lib/types";
+import { difficultyLabels } from "@/app/lib/types";
+import type { Hack } from "@/app/lib/types";
+import type { HackIndexItem } from "@/app/lib/hack-index";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tag, BarChart2 } from "lucide-react";
 
+type HackCardData = Hack | HackIndexItem;
+
 interface HackCardProps {
-  hack: Hack;
+  hack: HackCardData;
 }
 
 export function HackCard({ hack }: HackCardProps) {
