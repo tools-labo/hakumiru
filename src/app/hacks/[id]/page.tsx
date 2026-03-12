@@ -28,6 +28,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const ogImage = "/ogp.PNG";
+
   return {
     title: hack.title,
     description: hack.summary,
@@ -35,11 +37,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${hack.title} | ハクミル`,
       description: hack.summary,
       url: `/hacks/${hack.id}`,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${hack.title} | ハクミル`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${hack.title} | ハクミル`,
       description: hack.summary,
+      images: [ogImage],
     },
   };
 }
