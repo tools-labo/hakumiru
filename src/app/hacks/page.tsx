@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { HacksListClient } from "./HacksListClient";
+import { getPublishedHackIndex } from "@/app/lib/hacks.server";
 
 export const metadata: Metadata = {
   title: "AIハック一覧",
@@ -21,9 +22,11 @@ export const metadata: Metadata = {
 };
 
 export default function HacksPage() {
+  const publishedHacks = getPublishedHackIndex();
+
   return (
     <Suspense fallback={null}>
-      <HacksListClient />
+      <HacksListClient publishedHacks={publishedHacks} />
     </Suspense>
   );
 }
