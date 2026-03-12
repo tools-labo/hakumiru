@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPublishedHackById, getPublishedHacks, getRelatedHacks } from "@/app/lib/hacks";
+import {
+  getPublishedHackById,
+  getPublishedHackIndex,
+  getRelatedHackIndex,
+} from "@/app/lib/hacks.server";
 import { HackDetailClient } from "./HackDetailClient";
 
 type PageProps = {
@@ -8,7 +12,7 @@ type PageProps = {
 };
 
 export async function generateStaticParams() {
-  return getPublishedHacks().map((hack) => ({
+  return getPublishedHackIndex().map((hack) => ({
     id: hack.id,
   }));
 }
@@ -48,7 +52,7 @@ export default async function HackDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const relatedHacks = getRelatedHacks(id, 3);
+  const relatedHacks = getRelatedHackIndex(id, 3);
 
   return <HackDetailClient hack={hack} relatedHacks={relatedHacks} />;
 }
