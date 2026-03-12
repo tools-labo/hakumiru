@@ -15,31 +15,19 @@ import {
 } from "@/components/ui/select";
 import { Search, Filter, X } from "lucide-react";
 import {
-  Hack,
   categories,
   useCaseLabels,
+  useCaseOrder,
   UseCase,
 } from "@/app/lib/types";
-import { getPublishedHacks } from "@/app/lib/hacks";
+import type { HackIndexItem } from "@/app/lib/hack-index";
 
-const mobileUseCaseRows: UseCase[][] = [
-  ["make_money", "social_publish"],
-  ["write_blog_note", "creative"],
-  ["organize_info", "research_compare"],
-];
+type Props = {
+  publishedHacks: HackIndexItem[];
+};
 
-const validUseCases: UseCase[] = [
-  "write_blog_note",
-  "make_money",
-  "research_compare",
-  "organize_info",
-  "social_publish",
-  "creative",
-];
-
-export function HacksListClient() {
+export function HacksListClient({ publishedHacks }: Props) {
   const searchParams = useSearchParams();
-  const publishedHacks = useMemo(() => getPublishedHacks(), []);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedUseCase, setSelectedUseCase] = useState<UseCase | "all">("all");
@@ -51,7 +39,7 @@ export function HacksListClient() {
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
 
-    if (useCaseParam && validUseCases.includes(useCaseParam as UseCase)) {
+    if (useCaseParam && useCaseOrder.includes(useCaseParam as UseCase)) {
       setSelectedUseCase(useCaseParam as UseCase);
     } else {
       setSelectedUseCase("all");
@@ -73,11 +61,13 @@ export function HacksListClient() {
   }, [searchParams]);
 
   const filteredHacks = useMemo(() => {
-    return publishedHacks.filter((hack: Hack) => {
+    return publishedHacks.filter((hack) => {
+      const q = searchQuery.toLowerCase();
+
       const matchesSearch =
-        hack.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        hack.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        hack.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+        hack.title.toLowerCase().includes(q) ||
+        hack.summary.toLowerCase().includes(q) ||
+        hack.tags.some((t) => t.toLowerCase().includes(q));
 
       const matchesUseCase =
         selectedUseCase === "all" ||
@@ -132,49 +122,22 @@ export function HacksListClient() {
               </p>
             </div>
 
-            <div className="space-y-2 md:hidden">
+            <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-2">
               <Button
                 type="button"
                 variant={selectedUseCase === "all" ? "default" : "outline"}
-                className="w-full rounded-full h-10 text-sm font-semibold"
+                className="rounded-full font-bold"
                 onClick={() => setSelectedUseCase("all")}
               >
                 すべて
               </Button>
 
-              {mobileUseCaseRows.map((row, rowIndex) => (
-                <div key={rowIndex} className="grid grid-cols-2 gap-2">
-                  {row.map((useCase) => (
-                    <Button
-                      key={useCase}
-                      type="button"
-                      variant={selectedUseCase === useCase ? "default" : "outline"}
-                      className="w-full rounded-full h-11 px-3 text-[13px] font-semibold whitespace-nowrap leading-none"
-                      onClick={() => setSelectedUseCase(useCase)}
-                    >
-                      {useCaseLabels[useCase]}
-                    </Button>
-                  ))}
-                </div>
-              ))}
-            </div>
-
-            <div className="hidden md:flex md:flex-wrap md:gap-2">
-              <Button
-                type="button"
-                variant={selectedUseCase === "all" ? "default" : "outline"}
-                className="rounded-full h-10 text-sm font-semibold"
-                onClick={() => setSelectedUseCase("all")}
-              >
-                すべて
-              </Button>
-
-              {validUseCases.map((useCase) => (
+              {useCaseOrder.map((useCase) => (
                 <Button
                   key={useCase}
                   type="button"
                   variant={selectedUseCase === useCase ? "default" : "outline"}
-                  className="rounded-full h-11 text-sm font-semibold whitespace-nowrap"
+                  className="rounded-full font-bold"
                   onClick={() => setSelectedUseCase(useCase)}
                 >
                   {useCaseLabels[useCase]}
