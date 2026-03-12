@@ -6,6 +6,8 @@ import { Header } from "@/components/Header";
 import { HackCard } from "@/components/HackCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import type { Hack } from "@/app/lib/types";
+import { difficultyLabels, planRequirementLabels } from "@/app/lib/types";
 import {
   ChevronLeft,
   Copy,
@@ -19,18 +21,15 @@ import {
   Share2,
   ExternalLink,
 } from "lucide-react";
-import { difficultyLabels, planRequirementLabels } from "@/app/lib/types";
-import { getPublishedHackById, getRelatedHacks } from "@/app/lib/hacks";
 
-export function HackDetailClient({ id }: { id: string }) {
-  const hack = getPublishedHackById(id);
-  const relatedHacks = getRelatedHacks(id, 3);
+type HackDetailClientProps = {
+  hack: Hack;
+  relatedHacks: Hack[];
+};
+
+export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) {
   const [copiedPrompt, setCopiedPrompt] = useState(false);
   const [copiedUrl, setCopiedUrl] = useState(false);
-
-  if (!hack) {
-    return null;
-  }
 
   const pageUrl = useMemo(() => {
     if (typeof window === "undefined") {
@@ -78,7 +77,10 @@ export function HackDetailClient({ id }: { id: string }) {
           <div className="bg-white rounded-2xl border shadow-sm overflow-hidden">
             <div className="p-6 md:p-8 border-b">
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <Badge variant="secondary" className="font-bold px-3 py-1 bg-primary/5 text-primary border-primary/10">
+                <Badge
+                  variant="secondary"
+                  className="font-bold px-3 py-1 bg-primary/5 text-primary border-primary/10"
+                >
                   {hack.category}
                 </Badge>
                 <div
