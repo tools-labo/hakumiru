@@ -124,5 +124,30 @@
     "status": "published",
     "created_at": "2026-03-09",
     "updated_at": "2026-03-09"
+  },
+  {
+    "id": "hack_0019",
+    "title": "ChatGPTでアフィリエイト比較記事の比較表項目と見出し構成を決める",
+    "summary": "ChatGPTに商品情報・想定読者・訴求方向を渡し、本文を書く前に比較表で使う項目と記事の見出し順を同時に固めるハックです。2〜3商品の比較記事で止まりやすい『比較軸が決まらない』『構成が組めない』を先に解消し、読者が選びやすい比較記事の骨組みを作れます。",
+    "category": "副業・発信",
+    "tags": [
+      "アフィリエイト記事",
+      "比較記事",
+      "記事構成",
+      "比較表設計",
+      "見出し作成",
+      "ブログ執筆"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "make_money",
+    "use_cases": [
+      "make_money",
+      "research_compare",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
   }
 ]
