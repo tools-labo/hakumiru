@@ -7,6 +7,7 @@ import { HackCard } from "@/components/HackCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Hack } from "@/app/lib/types";
+import type { HackIndexItem } from "@/app/lib/hack-index";
 import { difficultyLabels, planRequirementLabels } from "@/app/lib/types";
 import {
   ChevronLeft,
@@ -24,10 +25,13 @@ import {
 
 type HackDetailClientProps = {
   hack: Hack;
-  relatedHacks: Hack[];
+  relatedHacks: HackIndexItem[];
 };
 
-export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) {
+export function HackDetailClient({
+  hack,
+  relatedHacks,
+}: HackDetailClientProps) {
   const [copiedPrompt, setCopiedPrompt] = useState(false);
   const [copiedUrl, setCopiedUrl] = useState(false);
 
@@ -89,7 +93,10 @@ export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) 
                   <BarChart2 className="w-3 h-3" />
                   {difficultyLabels[hack.difficulty]}
                 </div>
-                <Badge variant="outline" className="font-bold px-3 py-1 text-[11px]">
+                <Badge
+                  variant="outline"
+                  className="font-bold px-3 py-1 text-[11px]"
+                >
                   {planRequirementLabels[hack.plan_requirement]}
                 </Badge>
               </div>
@@ -97,7 +104,9 @@ export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) 
               <h1 className="text-2xl md:text-3xl font-black leading-tight mb-4 text-slate-900">
                 {hack.title}
               </h1>
-              <p className="text-muted-foreground leading-relaxed">{hack.summary}</p>
+              <p className="text-muted-foreground leading-relaxed">
+                {hack.summary}
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 border-b">
@@ -108,8 +117,12 @@ export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) 
                 <div className="space-y-4">
                   <ul className="space-y-3">
                     {hack.problem_points.map((point, i) => (
-                      <li key={i} className="text-sm font-bold text-slate-800 flex gap-2.5 leading-relaxed">
-                        <span className="text-slate-300 mt-0.5">•</span> {point}
+                      <li
+                        key={i}
+                        className="text-sm font-bold text-slate-800 flex gap-2.5 leading-relaxed"
+                      >
+                        <span className="text-slate-300 mt-0.5">•</span>
+                        {point}
                       </li>
                     ))}
                   </ul>
@@ -126,8 +139,12 @@ export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) 
                 <div className="space-y-4">
                   <ul className="space-y-3">
                     {hack.result_points.map((point, i) => (
-                      <li key={i} className="text-sm font-bold text-slate-800 flex gap-2.5 leading-relaxed">
-                        <span className="text-green-400 mt-0.5">•</span> {point}
+                      <li
+                        key={i}
+                        className="text-sm font-bold text-slate-800 flex gap-2.5 leading-relaxed"
+                      >
+                        <span className="text-green-400 mt-0.5">•</span>
+                        {point}
                       </li>
                     ))}
                   </ul>
@@ -167,7 +184,11 @@ export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) 
                     className="gap-2 font-bold h-8 px-3 text-xs border-primary/20 hover:bg-primary/5 hover:text-primary transition-all"
                     size="sm"
                   >
-                    {copiedPrompt ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                    {copiedPrompt ? (
+                      <Check className="w-3.5 h-3.5" />
+                    ) : (
+                      <Copy className="w-3.5 h-3.5" />
+                    )}
                     {copiedPrompt ? "コピー完了" : "コピーする"}
                   </Button>
                 </div>
@@ -182,11 +203,16 @@ export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) 
                 </h3>
                 <div className="space-y-3">
                   {hack.steps.map((step, index) => (
-                    <div key={index} className="flex gap-4 items-start p-4 bg-slate-50 border rounded-xl">
+                    <div
+                      key={index}
+                      className="flex gap-4 items-start p-4 bg-slate-50 border rounded-xl"
+                    >
                       <div className="flex-shrink-0 w-6 h-6 bg-primary text-white rounded-md flex items-center justify-center font-black text-xs">
                         {index + 1}
                       </div>
-                      <div className="text-sm font-medium leading-relaxed text-slate-700">{step}</div>
+                      <div className="text-sm font-medium leading-relaxed text-slate-700">
+                        {step}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -224,12 +250,20 @@ export function HackDetailClient({ hack, relatedHacks }: HackDetailClientProps) 
                     onClick={handleCopyUrl}
                     className="gap-2 font-bold"
                   >
-                    {copiedUrl ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                    {copiedUrl ? (
+                      <Check className="w-4 h-4" />
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
                     {copiedUrl ? "URLをコピーしました" : "URLをコピー"}
                   </Button>
 
                   <Button asChild className="gap-2 font-bold">
-                    <a href={xShareUrl} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={xShareUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <ExternalLink className="w-4 h-4" />
                       Xで共有
                     </a>
