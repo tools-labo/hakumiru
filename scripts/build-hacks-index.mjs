@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
+const legacyFile = path.join(root, "src", "app", "lib", "hacks.json");
 const recordsDir = path.join(root, "src", "data", "hacks", "records");
 const generatedDir = path.join(root, "src", "data", "hacks", "generated");
 const byCategoryDir = path.join(generatedDir, "by-category");
@@ -36,7 +37,39 @@ function toIndexItem(hack) {
   };
 }
 
+function bootstrapRecordsFromLegacyIfNeeded() {
+  if (fs.existsSync(recordsDir)) return;
+
+  if (!fs.existsSync(legacyFile)) {
+    throw new Error(
+      `Neither records directory nor legacy hacks.json exists.\nMissing: ${recordsDir}\nMissing: ${legacyFile}`
+    );
+  }
+
+  ensureDir(recordsDir);
+
+  const legacyHacks = readJson(legacyFile);
+
+  if (!Array.isArray(legacyHacks)) {
+    throw new Error("Legacy hacks.json is not an array.");
+  }
+
+  for (const hack of legacyHacks) {
+    if (!hack?.id) {
+      throw new Error("Found hack without id in legacy hacks.json.");
+    }
+
+    writeJson(path.join(recordsDir, `${hack.id}.json`), hack);
+  }
+
+  console.log(
+    `Bootstrapped ${legacyHacks.length} hack records from legacy hacks.json`
+  );
+}
+
 function main() {
+  bootstrapRecordsFromLegacyIfNeeded();
+
   ensureDir(generatedDir);
   ensureDir(byCategoryDir);
   ensureDir(byUseCaseDir);
