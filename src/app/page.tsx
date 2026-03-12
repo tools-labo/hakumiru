@@ -70,22 +70,22 @@ export default function Home() {
       <Header />
 
       <section className="bg-white border-b">
-        <div className="container mx-auto px-4 py-16 md:py-24 max-w-5xl">
-          <div className="space-y-8 text-center">
-            <div className="space-y-4">
+        <div className="container mx-auto px-4 py-12 md:py-20 max-w-5xl">
+          <div className="space-y-6 text-center">
+            <div className="space-y-3">
               <p className="text-sm md:text-base font-bold tracking-[0.2em] text-primary uppercase">
                 ハクミル｜AI活用ハック
               </p>
               <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight">
                 AIの使い方が<span className="text-primary">みつかる</span>ハック集。
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 何を入力して、どう使い、何ができるか。<br className="hidden md:block" />
                 プロンプトと手順つきで、ChatGPTなどのAIの使い方を探せるサイトです。
               </p>
             </div>
 
-            <div className="max-w-xl mx-auto">
+            <div className="max-w-xl mx-auto pt-1">
               <Button
                 size="lg"
                 className="h-14 px-10 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
@@ -101,7 +101,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-16 max-w-6xl">
+      <section className="container mx-auto px-4 py-14 max-w-6xl">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
             やりたいことから探す
@@ -128,8 +128,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-4 max-w-6xl">
-        <div className="flex items-center justify-between mb-10">
+      <section className="container mx-auto px-4 py-2 max-w-6xl">
+        <div className="flex items-center justify-between mb-8">
           <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
             カテゴリー
           </h2>
@@ -137,17 +137,17 @@ export default function Home() {
             href="/hacks"
             className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
           >
-            全て見る <ChevronRight className="w-4 h-4" />
+            一覧を見る <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {categoriesList.map((cat) => (
             <Link key={cat.name} href={`/hacks?category=${cat.name}`}>
-              <div className="bg-white p-6 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center">
-                <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+              <div className="bg-white px-4 py-5 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center min-h-[124px]">
+                <div className="w-9 h-9 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-3 group-hover:scale-110 transition-transform">
                   {cat.icon}
                 </div>
-                <h3 className="font-bold text-sm mb-1 leading-snug">{cat.name}</h3>
+                <h3 className="font-bold text-sm leading-snug">{cat.name}</h3>
               </div>
             </Link>
           ))}
@@ -163,7 +163,7 @@ export default function Home() {
             href="/hacks"
             className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
           >
-            全てのハックを表示 <ChevronRight className="w-4 h-4" />
+            一覧を見る <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
 
