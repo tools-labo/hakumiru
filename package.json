@@ -7,6 +7,7 @@
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build:hacks-index": "node scripts/build-hacks-index.mjs",
+    "split:hacks-json": "node scripts/split-hacks-json.mjs",
     "prebuild": "npm run build:hacks-index",
     "build": "next build",
     "start": "next start",
