@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getPublishedHackById, getPublishedHacks } from "@/app/lib/hacks";
+import { getPublishedHackById, getPublishedHacks, getRelatedHacks } from "@/app/lib/hacks";
 import { HackDetailClient } from "./HackDetailClient";
 
 type PageProps = {
@@ -48,5 +48,7 @@ export default async function HackDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  return <HackDetailClient id={id} />;
+  const relatedHacks = getRelatedHacks(id, 3);
+
+  return <HackDetailClient hack={hack} relatedHacks={relatedHacks} />;
 }
