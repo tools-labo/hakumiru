@@ -1,0 +1,250 @@
+[
+  {
+    "id": "hack_0002",
+    "title": "音声メモを社内共有・日報・発信用に書き分ける",
+    "summary": "会議後や業務後の音声メモの文字起こしをもとに、社内共有メール・上司向け日報・外部発信用の3用途で、残す情報と削る情報を切り替えて書き分けるハック。",
+    "category": "仕事効率化",
+    "tags": [
+      "整理",
+      "文章生成",
+      "仕事",
+      "メール",
+      "時短",
+      "抜け漏れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info",
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0003",
+    "title": "1ネタをXで検証し、noteとショート動画へ再編集する週次発信ハック",
+    "summary": "体験談・顧客質問・主張・根拠・CTAを1つの発信ネタとして整理し、Xで反応を検証し、通過した論点だけをnoteとショート動画へ再編集する週次発信運用の型。",
+    "category": "副業・発信",
+    "tags": [
+      "発信",
+      "SNS",
+      "動画",
+      "記事",
+      "構成作成",
+      "分析"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note",
+      "make_video",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0005",
+    "title": "動画台本・記事原稿1本から画像を役割別に作り分ける運用設計",
+    "summary": "動画台本または記事原稿を1本入力し、YouTubeサムネ3案、noteアイキャッチ2案、X図解1枚、手順フローチャート1枚を、媒体ごとの役割差に合わせた制作設計書へ分解する運用。単なる画像量産ではなく、日本語文字組みの制約、採用レビュー基準、公開前チェックまで含めて、非デザイナーでも選定・修正・公開判断を回しやすくする。",
+    "category": "画像作成",
+    "tags": [
+      "画像",
+      "発信",
+      "SNS",
+      "構成作成",
+      "整理",
+      "品質向上"
+    ],
+    "difficulty": "advanced",
+    "plan_requirement": "plus",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0006",
+    "title": "5問の音声回答で体験談note下書きとX要約を作る一次体験インタビューAI",
+    "summary": "通勤中や作業後5〜8分に、スマホで5つの固定質問へ音声回答するだけで、一次体験をもとにしたnote下書き、X投稿用要約、一次情報メモ、次回用の未回収論点までまとめて整理する発信素材化ハック。",
+    "category": "文章作成",
+    "tags": [
+      "文章作成",
+      "note",
+      "音声入力",
+      "体験談",
+      "X投稿",
+      "ネタ整理"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0007",
+    "title": "既存記事や商品説明から顔出しなしショートを週3本作る",
+    "summary": "記事・商品説明・FAQ・サービス紹介文などの既存テキストをもとに、ChatGPTで30〜60秒の解説台本を3本分作り、VrewでAIナレーション・字幕・縦動画化まで進めて、顔出しなしのショート動画として週3本の継続投稿へつなげる運用ハック。",
+    "category": "動画作成",
+    "tags": [
+      "動画作成",
+      "ショート動画",
+      "AIナレーション",
+      "顔出しなし",
+      "記事の動画化",
+      "継続投稿"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0008",
+    "title": "1枚の商品写真から媒体別・訴求別・入稿別の掲載画像を再構成する運用設計",
+    "summary": "商品写真1枚を起点に、ChatGPTで再撮影が必要な失敗とAI修正で救える失敗を切り分け、修正優先順位を決めたうえで、Photoroomで画像修正と派生案作成を進め、高級感・季節限定・初心者説明・比較訴求の掲載画像へ再構成し、楽天・Amazon・自社EC・SNS広告・SNS投稿ごとの入稿前チェックまで一連で整理するハック。",
+    "category": "画像作成",
+    "tags": [
+      "画像作成",
+      "EC画像",
+      "商品写真",
+      "媒体別運用",
+      "訴求設計",
+      "入稿前チェック"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "make_money",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0009",
+    "title": "過去投稿やメモから連載ネタを切らさず、AIと週1〜2本を回す共同執筆運用",
+    "summary": "過去投稿、SNS下書き、日常メモ、体験談をまとめて ChatGPT に渡し、今週公開分と予備分まで含めた連載テーマ候補、各回の切り口、記事構成、本文たたき台を作る運用。人は毎回『残したい体験・主張・具体例』を先に固定し、最後に『連載の声を守る確認』を行って、単発量産ではなく週1〜2本の継続更新を回す。",
+    "category": "副業・発信",
+    "tags": [
+      "連載運用",
+      "共同執筆",
+      "ブログ継続",
+      "note運用",
+      "ネタ切れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "social_publish",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-09",
+    "updated_at": "2026-03-09"
+  },
+  {
+    "id": "hack_0010",
+    "title": "比較レビューショートで誰向けか分かる購入判断動画を作る",
+    "summary": "2〜3商品の比較情報と実使用コメントをChatGPTに渡し、15〜30秒の比較レビューショート台本、概要欄、固定コメントまで一貫して下書きするハック。単なる紹介ではなく、『誰がどれを選ぶべきか』を短時間で判断しやすい購入判断コンテンツへ整える。",
+    "category": "副業・発信",
+    "tags": [
+      "比較レビュー",
+      "ショート動画台本",
+      "購入判断コンテンツ",
+      "概要欄設計",
+      "固定コメント導線",
+      "顔出しなし発信"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "make_money",
+    "use_cases": [
+      "make_money",
+      "social_publish",
+      "make_video",
+      "research_compare"
+    ],
+    "status": "published",
+    "created_at": "2026-03-09",
+    "updated_at": "2026-03-09"
+  },
+  {
+    "id": "hack_0012",
+    "title": "講義動画からショートの切り抜き候補3本と字幕下書きを出す",
+    "summary": "講義・解説・セミナー・ウェビナー系の長尺動画の文字起こしや要点メモを ChatGPT に渡し、ショート化前の採用判断材料として使える切り抜き候補を3本まとめて整理するハック。各候補で、切る話題・見どころ理由・冒頭フック・15〜45秒向け字幕下書き・仮タイトル・採用判断メモまで一式そろえ、編集前の比較と絞り込みを止まらず進めやすくする。",
+    "category": "動画作成",
+    "tags": [
+      "YouTube切り抜き候補",
+      "ショート動画運用",
+      "講義動画再利用",
+      "字幕下書き",
+      "冒頭フック作成",
+      "編集判断支援"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-10",
+    "updated_at": "2026-03-10"
+  },
+  {
+    "id": "hack_0013",
+    "title": "配信の文字起こしをXスレッド・note下書き・メルマガ要約に書き分けるAI",
+    "summary": "配信アーカイブや講義動画、ポッドキャストの文字起こしを、そのまま要約せずに「残す論点」「削る脱線」「引用候補」「FAQ候補」へ先に整理し、Xスレッド・note下書き・メルマガ要約へ媒体別に出し分けるハック。長尺コンテンツを1回きりで終わらせず、再発信しやすいテキスト資産へ変換する運用に向いている。",
+    "category": "文章作成",
+    "tags": [
+      "文字起こし再利用",
+      "Xスレッド作成",
+      "note下書き",
+      "メルマガ要約",
+      "長尺コンテンツ活用",
+      "媒体別リライト"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-10",
+    "updated_at": "2026-03-10"
+  }
+]

@@ -1,0 +1,244 @@
+[
+  {
+    "id": "hack_0002",
+    "title": "音声メモを社内共有・日報・発信用に書き分ける",
+    "summary": "会議後や業務後の音声メモの文字起こしをもとに、社内共有メール・上司向け日報・外部発信用の3用途で、残す情報と削る情報を切り替えて書き分けるハック。",
+    "category": "仕事効率化",
+    "tags": [
+      "整理",
+      "文章生成",
+      "仕事",
+      "メール",
+      "時短",
+      "抜け漏れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info",
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0003",
+    "title": "1ネタをXで検証し、noteとショート動画へ再編集する週次発信ハック",
+    "summary": "体験談・顧客質問・主張・根拠・CTAを1つの発信ネタとして整理し、Xで反応を検証し、通過した論点だけをnoteとショート動画へ再編集する週次発信運用の型。",
+    "category": "副業・発信",
+    "tags": [
+      "発信",
+      "SNS",
+      "動画",
+      "記事",
+      "構成作成",
+      "分析"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note",
+      "make_video",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0005",
+    "title": "動画台本・記事原稿1本から画像を役割別に作り分ける運用設計",
+    "summary": "動画台本または記事原稿を1本入力し、YouTubeサムネ3案、noteアイキャッチ2案、X図解1枚、手順フローチャート1枚を、媒体ごとの役割差に合わせた制作設計書へ分解する運用。単なる画像量産ではなく、日本語文字組みの制約、採用レビュー基準、公開前チェックまで含めて、非デザイナーでも選定・修正・公開判断を回しやすくする。",
+    "category": "画像作成",
+    "tags": [
+      "画像",
+      "発信",
+      "SNS",
+      "構成作成",
+      "整理",
+      "品質向上"
+    ],
+    "difficulty": "advanced",
+    "plan_requirement": "plus",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0006",
+    "title": "5問の音声回答で体験談note下書きとX要約を作る一次体験インタビューAI",
+    "summary": "通勤中や作業後5〜8分に、スマホで5つの固定質問へ音声回答するだけで、一次体験をもとにしたnote下書き、X投稿用要約、一次情報メモ、次回用の未回収論点までまとめて整理する発信素材化ハック。",
+    "category": "文章作成",
+    "tags": [
+      "文章作成",
+      "note",
+      "音声入力",
+      "体験談",
+      "X投稿",
+      "ネタ整理"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0009",
+    "title": "過去投稿やメモから連載ネタを切らさず、AIと週1〜2本を回す共同執筆運用",
+    "summary": "過去投稿、SNS下書き、日常メモ、体験談をまとめて ChatGPT に渡し、今週公開分と予備分まで含めた連載テーマ候補、各回の切り口、記事構成、本文たたき台を作る運用。人は毎回『残したい体験・主張・具体例』を先に固定し、最後に『連載の声を守る確認』を行って、単発量産ではなく週1〜2本の継続更新を回す。",
+    "category": "副業・発信",
+    "tags": [
+      "連載運用",
+      "共同執筆",
+      "ブログ継続",
+      "note運用",
+      "ネタ切れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "social_publish",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-09",
+    "updated_at": "2026-03-09"
+  },
+  {
+    "id": "hack_0013",
+    "title": "配信の文字起こしをXスレッド・note下書き・メルマガ要約に書き分けるAI",
+    "summary": "配信アーカイブや講義動画、ポッドキャストの文字起こしを、そのまま要約せずに「残す論点」「削る脱線」「引用候補」「FAQ候補」へ先に整理し、Xスレッド・note下書き・メルマガ要約へ媒体別に出し分けるハック。長尺コンテンツを1回きりで終わらせず、再発信しやすいテキスト資産へ変換する運用に向いている。",
+    "category": "文章作成",
+    "tags": [
+      "文字起こし再利用",
+      "Xスレッド作成",
+      "note下書き",
+      "メルマガ要約",
+      "長尺コンテンツ活用",
+      "媒体別リライト"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-10",
+    "updated_at": "2026-03-10"
+  },
+  {
+    "id": "hack_0014",
+    "title": "ChatGPTでブログ記事の見出し案を5つ出す",
+    "summary": "書きたいテーマ、想定読者、入れたい内容をChatGPTに渡し、ブログ記事やnote記事の見出し構成案を5パターンまとめて出すハック。ゼロから構成を考える負担を減らしつつ、自分に合う流れを選びやすくする。",
+    "category": "文章作成",
+    "tags": [
+      "ブログ構成",
+      "note構成",
+      "見出し作成",
+      "記事下書き",
+      "初心者向け",
+      "文章作成"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0015",
+    "title": "ChatGPTでnoteの導入文を3パターン作る",
+    "summary": "記事テーマ、読者、書きたい内容をChatGPTに渡し、noteやブログ記事の導入文を3パターンまとめて作るハック。書き出しで止まりやすい人でも、自分に合う入り方を選びやすくする。",
+    "category": "文章作成",
+    "tags": [
+      "導入文作成",
+      "note下書き",
+      "ブログ下書き",
+      "書き出し改善",
+      "初心者向け",
+      "文章作成"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0017",
+    "title": "ブログにコピペできる装飾HTMLパーツを作るAI",
+    "summary": "用途、入れたい文言、ラベル、色をChatGPTに渡し、ブログ記事にそのままコピペしやすい装飾HTMLパーツを3候補まとめて出すハック。注意書き、補足、見出し下ボックス、吹き出し、CTA前囲みなどを、文言と色だけ差し替えれば使いやすい形で受け取れる。",
+    "category": "文章作成",
+    "tags": [
+      "ブログ装飾",
+      "HTMLパーツ",
+      "コピペ用HTML",
+      "注意書きボックス",
+      "補足ボックス",
+      "記事デザイン"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "creative"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0018",
+    "title": "ブログの見た目の悩みから修正CSS案を出すAI",
+    "summary": "見た目の困りごと、困る画面、対象箇所のHTML、分かる範囲のCSSをChatGPTに渡し、原因候補、確認ポイント、小さく試せる修正CSS案を返すハック。見出し、余白、文字サイズ、スマホ表示などを当てずっぽうで触らず、影響範囲を見ながら少しずつ直しやすくする。",
+    "category": "プログラミング・開発",
+    "tags": [
+      "CSS修正",
+      "ブログデザイン",
+      "余白調整",
+      "見出し調整",
+      "スマホ表示",
+      "原因切り分け"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "creative"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  }
+]

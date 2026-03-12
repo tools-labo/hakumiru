@@ -1,0 +1,148 @@
+[
+  {
+    "id": "hack_0001",
+    "title": "ChatGPTで会議メモからタスク一覧と担当者別TODOを分けて作る",
+    "summary": "会議メモをChatGPTに貼り付け、決定事項・未決事項・期限付きタスク・担当者別TODOに分けて整理し、会議後すぐ使える実行リストを作る方法。",
+    "category": "仕事効率化",
+    "tags": [
+      "整理",
+      "仕事",
+      "会議",
+      "時短",
+      "抜け漏れ防止"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-07",
+    "updated_at": "2026-03-07"
+  },
+  {
+    "id": "hack_0002",
+    "title": "音声メモを社内共有・日報・発信用に書き分ける",
+    "summary": "会議後や業務後の音声メモの文字起こしをもとに、社内共有メール・上司向け日報・外部発信用の3用途で、残す情報と削る情報を切り替えて書き分けるハック。",
+    "category": "仕事効率化",
+    "tags": [
+      "整理",
+      "文章生成",
+      "仕事",
+      "メール",
+      "時短",
+      "抜け漏れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info",
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0003",
+    "title": "1ネタをXで検証し、noteとショート動画へ再編集する週次発信ハック",
+    "summary": "体験談・顧客質問・主張・根拠・CTAを1つの発信ネタとして整理し、Xで反応を検証し、通過した論点だけをnoteとショート動画へ再編集する週次発信運用の型。",
+    "category": "副業・発信",
+    "tags": [
+      "発信",
+      "SNS",
+      "動画",
+      "記事",
+      "構成作成",
+      "分析"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note",
+      "make_video",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0004",
+    "title": "CSVをAIで分析し、異常値・変動要因・次に見るべき論点を整理する",
+    "summary": "月次会議や週次レビューの前に、売上・件数・単価・来店数・販促実績などのCSVをAIに読ませ、比較しやすい数字の変動、外れ値、追加確認が必要な切り口を先に整理するためのハック。",
+    "category": "仕事効率化",
+    "tags": [
+      "分析",
+      "整理",
+      "仕事",
+      "会議",
+      "効率化",
+      "抜け漏れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0005",
+    "title": "動画台本・記事原稿1本から画像を役割別に作り分ける運用設計",
+    "summary": "動画台本または記事原稿を1本入力し、YouTubeサムネ3案、noteアイキャッチ2案、X図解1枚、手順フローチャート1枚を、媒体ごとの役割差に合わせた制作設計書へ分解する運用。単なる画像量産ではなく、日本語文字組みの制約、採用レビュー基準、公開前チェックまで含めて、非デザイナーでも選定・修正・公開判断を回しやすくする。",
+    "category": "画像作成",
+    "tags": [
+      "画像",
+      "発信",
+      "SNS",
+      "構成作成",
+      "整理",
+      "品質向上"
+    ],
+    "difficulty": "advanced",
+    "plan_requirement": "plus",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0006",
+    "title": "5問の音声回答で体験談note下書きとX要約を作る一次体験インタビューAI",
+    "summary": "通勤中や作業後5〜8分に、スマホで5つの固定質問へ音声回答するだけで、一次体験をもとにしたnote下書き、X投稿用要約、一次情報メモ、次回用の未回収論点までまとめて整理する発信素材化ハック。",
+    "category": "文章作成",
+    "tags": [
+      "文章作成",
+      "note",
+      "音声入力",
+      "体験談",
+      "X投稿",
+      "ネタ整理"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  }
+]

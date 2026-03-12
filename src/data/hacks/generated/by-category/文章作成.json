@@ -1,0 +1,120 @@
+[
+  {
+    "id": "hack_0006",
+    "title": "5問の音声回答で体験談note下書きとX要約を作る一次体験インタビューAI",
+    "summary": "通勤中や作業後5〜8分に、スマホで5つの固定質問へ音声回答するだけで、一次体験をもとにしたnote下書き、X投稿用要約、一次情報メモ、次回用の未回収論点までまとめて整理する発信素材化ハック。",
+    "category": "文章作成",
+    "tags": [
+      "文章作成",
+      "note",
+      "音声入力",
+      "体験談",
+      "X投稿",
+      "ネタ整理"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0013",
+    "title": "配信の文字起こしをXスレッド・note下書き・メルマガ要約に書き分けるAI",
+    "summary": "配信アーカイブや講義動画、ポッドキャストの文字起こしを、そのまま要約せずに「残す論点」「削る脱線」「引用候補」「FAQ候補」へ先に整理し、Xスレッド・note下書き・メルマガ要約へ媒体別に出し分けるハック。長尺コンテンツを1回きりで終わらせず、再発信しやすいテキスト資産へ変換する運用に向いている。",
+    "category": "文章作成",
+    "tags": [
+      "文字起こし再利用",
+      "Xスレッド作成",
+      "note下書き",
+      "メルマガ要約",
+      "長尺コンテンツ活用",
+      "媒体別リライト"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-10",
+    "updated_at": "2026-03-10"
+  },
+  {
+    "id": "hack_0014",
+    "title": "ChatGPTでブログ記事の見出し案を5つ出す",
+    "summary": "書きたいテーマ、想定読者、入れたい内容をChatGPTに渡し、ブログ記事やnote記事の見出し構成案を5パターンまとめて出すハック。ゼロから構成を考える負担を減らしつつ、自分に合う流れを選びやすくする。",
+    "category": "文章作成",
+    "tags": [
+      "ブログ構成",
+      "note構成",
+      "見出し作成",
+      "記事下書き",
+      "初心者向け",
+      "文章作成"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0015",
+    "title": "ChatGPTでnoteの導入文を3パターン作る",
+    "summary": "記事テーマ、読者、書きたい内容をChatGPTに渡し、noteやブログ記事の導入文を3パターンまとめて作るハック。書き出しで止まりやすい人でも、自分に合う入り方を選びやすくする。",
+    "category": "文章作成",
+    "tags": [
+      "導入文作成",
+      "note下書き",
+      "ブログ下書き",
+      "書き出し改善",
+      "初心者向け",
+      "文章作成"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0017",
+    "title": "ブログにコピペできる装飾HTMLパーツを作るAI",
+    "summary": "用途、入れたい文言、ラベル、色をChatGPTに渡し、ブログ記事にそのままコピペしやすい装飾HTMLパーツを3候補まとめて出すハック。注意書き、補足、見出し下ボックス、吹き出し、CTA前囲みなどを、文言と色だけ差し替えれば使いやすい形で受け取れる。",
+    "category": "文章作成",
+    "tags": [
+      "ブログ装飾",
+      "HTMLパーツ",
+      "コピペ用HTML",
+      "注意書きボックス",
+      "補足ボックス",
+      "記事デザイン"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "creative"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  }
+]

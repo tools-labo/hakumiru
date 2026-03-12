@@ -1,0 +1,78 @@
+[
+  {
+    "id": "hack_0003",
+    "title": "1ネタをXで検証し、noteとショート動画へ再編集する週次発信ハック",
+    "summary": "体験談・顧客質問・主張・根拠・CTAを1つの発信ネタとして整理し、Xで反応を検証し、通過した論点だけをnoteとショート動画へ再編集する週次発信運用の型。",
+    "category": "副業・発信",
+    "tags": [
+      "発信",
+      "SNS",
+      "動画",
+      "記事",
+      "構成作成",
+      "分析"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note",
+      "make_video",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0009",
+    "title": "過去投稿やメモから連載ネタを切らさず、AIと週1〜2本を回す共同執筆運用",
+    "summary": "過去投稿、SNS下書き、日常メモ、体験談をまとめて ChatGPT に渡し、今週公開分と予備分まで含めた連載テーマ候補、各回の切り口、記事構成、本文たたき台を作る運用。人は毎回『残したい体験・主張・具体例』を先に固定し、最後に『連載の声を守る確認』を行って、単発量産ではなく週1〜2本の継続更新を回す。",
+    "category": "副業・発信",
+    "tags": [
+      "連載運用",
+      "共同執筆",
+      "ブログ継続",
+      "note運用",
+      "ネタ切れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "social_publish",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-09",
+    "updated_at": "2026-03-09"
+  },
+  {
+    "id": "hack_0010",
+    "title": "比較レビューショートで誰向けか分かる購入判断動画を作る",
+    "summary": "2〜3商品の比較情報と実使用コメントをChatGPTに渡し、15〜30秒の比較レビューショート台本、概要欄、固定コメントまで一貫して下書きするハック。単なる紹介ではなく、『誰がどれを選ぶべきか』を短時間で判断しやすい購入判断コンテンツへ整える。",
+    "category": "副業・発信",
+    "tags": [
+      "比較レビュー",
+      "ショート動画台本",
+      "購入判断コンテンツ",
+      "概要欄設計",
+      "固定コメント導線",
+      "顔出しなし発信"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "make_money",
+    "use_cases": [
+      "make_money",
+      "social_publish",
+      "make_video",
+      "research_compare"
+    ],
+    "status": "published",
+    "created_at": "2026-03-09",
+    "updated_at": "2026-03-09"
+  }
+]

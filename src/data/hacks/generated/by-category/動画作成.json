@@ -1,0 +1,51 @@
+[
+  {
+    "id": "hack_0007",
+    "title": "既存記事や商品説明から顔出しなしショートを週3本作る",
+    "summary": "記事・商品説明・FAQ・サービス紹介文などの既存テキストをもとに、ChatGPTで30〜60秒の解説台本を3本分作り、VrewでAIナレーション・字幕・縦動画化まで進めて、顔出しなしのショート動画として週3本の継続投稿へつなげる運用ハック。",
+    "category": "動画作成",
+    "tags": [
+      "動画作成",
+      "ショート動画",
+      "AIナレーション",
+      "顔出しなし",
+      "記事の動画化",
+      "継続投稿"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0012",
+    "title": "講義動画からショートの切り抜き候補3本と字幕下書きを出す",
+    "summary": "講義・解説・セミナー・ウェビナー系の長尺動画の文字起こしや要点メモを ChatGPT に渡し、ショート化前の採用判断材料として使える切り抜き候補を3本まとめて整理するハック。各候補で、切る話題・見どころ理由・冒頭フック・15〜45秒向け字幕下書き・仮タイトル・採用判断メモまで一式そろえ、編集前の比較と絞り込みを止まらず進めやすくする。",
+    "category": "動画作成",
+    "tags": [
+      "YouTube切り抜き候補",
+      "ショート動画運用",
+      "講義動画再利用",
+      "字幕下書き",
+      "冒頭フック作成",
+      "編集判断支援"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-10",
+    "updated_at": "2026-03-10"
+  }
+]

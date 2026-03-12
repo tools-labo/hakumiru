@@ -1,0 +1,149 @@
+[
+  {
+    "id": "hack_0005",
+    "title": "動画台本・記事原稿1本から画像を役割別に作り分ける運用設計",
+    "summary": "動画台本または記事原稿を1本入力し、YouTubeサムネ3案、noteアイキャッチ2案、X図解1枚、手順フローチャート1枚を、媒体ごとの役割差に合わせた制作設計書へ分解する運用。単なる画像量産ではなく、日本語文字組みの制約、採用レビュー基準、公開前チェックまで含めて、非デザイナーでも選定・修正・公開判断を回しやすくする。",
+    "category": "画像作成",
+    "tags": [
+      "画像",
+      "発信",
+      "SNS",
+      "構成作成",
+      "整理",
+      "品質向上"
+    ],
+    "difficulty": "advanced",
+    "plan_requirement": "plus",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0007",
+    "title": "既存記事や商品説明から顔出しなしショートを週3本作る",
+    "summary": "記事・商品説明・FAQ・サービス紹介文などの既存テキストをもとに、ChatGPTで30〜60秒の解説台本を3本分作り、VrewでAIナレーション・字幕・縦動画化まで進めて、顔出しなしのショート動画として週3本の継続投稿へつなげる運用ハック。",
+    "category": "動画作成",
+    "tags": [
+      "動画作成",
+      "ショート動画",
+      "AIナレーション",
+      "顔出しなし",
+      "記事の動画化",
+      "継続投稿"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0008",
+    "title": "1枚の商品写真から媒体別・訴求別・入稿別の掲載画像を再構成する運用設計",
+    "summary": "商品写真1枚を起点に、ChatGPTで再撮影が必要な失敗とAI修正で救える失敗を切り分け、修正優先順位を決めたうえで、Photoroomで画像修正と派生案作成を進め、高級感・季節限定・初心者説明・比較訴求の掲載画像へ再構成し、楽天・Amazon・自社EC・SNS広告・SNS投稿ごとの入稿前チェックまで一連で整理するハック。",
+    "category": "画像作成",
+    "tags": [
+      "画像作成",
+      "EC画像",
+      "商品写真",
+      "媒体別運用",
+      "訴求設計",
+      "入稿前チェック"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "make_money",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0012",
+    "title": "講義動画からショートの切り抜き候補3本と字幕下書きを出す",
+    "summary": "講義・解説・セミナー・ウェビナー系の長尺動画の文字起こしや要点メモを ChatGPT に渡し、ショート化前の採用判断材料として使える切り抜き候補を3本まとめて整理するハック。各候補で、切る話題・見どころ理由・冒頭フック・15〜45秒向け字幕下書き・仮タイトル・採用判断メモまで一式そろえ、編集前の比較と絞り込みを止まらず進めやすくする。",
+    "category": "動画作成",
+    "tags": [
+      "YouTube切り抜き候補",
+      "ショート動画運用",
+      "講義動画再利用",
+      "字幕下書き",
+      "冒頭フック作成",
+      "編集判断支援"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "creative",
+    "use_cases": [
+      "creative",
+      "social_publish"
+    ],
+    "status": "published",
+    "created_at": "2026-03-10",
+    "updated_at": "2026-03-10"
+  },
+  {
+    "id": "hack_0017",
+    "title": "ブログにコピペできる装飾HTMLパーツを作るAI",
+    "summary": "用途、入れたい文言、ラベル、色をChatGPTに渡し、ブログ記事にそのままコピペしやすい装飾HTMLパーツを3候補まとめて出すハック。注意書き、補足、見出し下ボックス、吹き出し、CTA前囲みなどを、文言と色だけ差し替えれば使いやすい形で受け取れる。",
+    "category": "文章作成",
+    "tags": [
+      "ブログ装飾",
+      "HTMLパーツ",
+      "コピペ用HTML",
+      "注意書きボックス",
+      "補足ボックス",
+      "記事デザイン"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "creative"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0018",
+    "title": "ブログの見た目の悩みから修正CSS案を出すAI",
+    "summary": "見た目の困りごと、困る画面、対象箇所のHTML、分かる範囲のCSSをChatGPTに渡し、原因候補、確認ポイント、小さく試せる修正CSS案を返すハック。見出し、余白、文字サイズ、スマホ表示などを当てずっぽうで触らず、影響範囲を見ながら少しずつ直しやすくする。",
+    "category": "プログラミング・開発",
+    "tags": [
+      "CSS修正",
+      "ブログデザイン",
+      "余白調整",
+      "見出し調整",
+      "スマホ表示",
+      "原因切り分け"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "creative"
+    ],
+    "status": "published",
+    "created_at": "2026-03-11",
+    "updated_at": "2026-03-11"
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "hack_0004",
+    "title": "CSVをAIで分析し、異常値・変動要因・次に見るべき論点を整理する",
+    "summary": "月次会議や週次レビューの前に、売上・件数・単価・来店数・販促実績などのCSVをAIに読ませ、比較しやすい数字の変動、外れ値、追加確認が必要な切り口を先に整理するためのハック。",
+    "category": "仕事効率化",
+    "tags": [
+      "分析",
+      "整理",
+      "仕事",
+      "会議",
+      "効率化",
+      "抜け漏れ防止"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-08",
+    "updated_at": "2026-03-08"
+  },
+  {
+    "id": "hack_0010",
+    "title": "比較レビューショートで誰向けか分かる購入判断動画を作る",
+    "summary": "2〜3商品の比較情報と実使用コメントをChatGPTに渡し、15〜30秒の比較レビューショート台本、概要欄、固定コメントまで一貫して下書きするハック。単なる紹介ではなく、『誰がどれを選ぶべきか』を短時間で判断しやすい購入判断コンテンツへ整える。",
+    "category": "副業・発信",
+    "tags": [
+      "比較レビュー",
+      "ショート動画台本",
+      "購入判断コンテンツ",
+      "概要欄設計",
+      "固定コメント導線",
+      "顔出しなし発信"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "free",
+    "primary_use_case": "make_money",
+    "use_cases": [
+      "make_money",
+      "social_publish",
+      "make_video",
+      "research_compare"
+    ],
+    "status": "published",
+    "created_at": "2026-03-09",
+    "updated_at": "2026-03-09"
+  },
+  {
+    "id": "hack_0011",
+    "title": "提案前の競合3社比較メモを作る",
+    "summary": "自社サービス名、提案先企業、相手の判断基準、競合3社を入力すると、ChatGPTのDeep Researchで提案前に使う比較メモの初稿を固定フォーマットで作るハックです。価格・導入事例・差別化要素だけでなく、想定反論、その理由、追加で確認すべき項目までまとめて整理できます。",
+    "category": "仕事効率化",
+    "tags": [
+      "Deep Research",
+      "営業提案準備",
+      "競合3社比較",
+      "想定反論",
+      "一次情報確認",
+      "社内共有メモ"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-10",
+    "updated_at": "2026-03-10"
+  }
+]
