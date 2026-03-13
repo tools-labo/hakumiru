@@ -12,6 +12,15 @@ function readJsonFile<T>(filePath: string): T {
   return JSON.parse(fs.readFileSync(filePath, "utf-8")) as T;
 }
 
+function sortByNewest(a: { created_at: string }, b: { created_at: string }) {
+  return b.created_at.localeCompare(a.created_at);
+}
+
+function countSharedTags(base: HackIndexItem, target: HackIndexItem) {
+  const baseTags = new Set(base.tags);
+  return target.tags.filter((tag) => baseTags.has(tag)).length;
+}
+
 export function getPublishedHackIndex(): HackIndexItem[] {
   return readJsonFile<HackIndexItem[]>(
     path.join(generatedDir, "hacks-index.json")
@@ -42,28 +51,39 @@ export function getPublishedHacks(): Hack[] {
 export function getRelatedHackIndex(id: string, limit = 3): HackIndexItem[] {
   const index = getPublishedHackIndex();
   const current = index.find((item) => item.id === id);
+
   if (!current) return [];
 
-  const scored = index
-    .filter((item) => item.id !== id)
-    .map((item) => {
-      let score = 0;
+  const others = index.filter((item) => item.id !== id);
 
-      if (item.category === current.category) score += 2;
-      if (item.primary_use_case === current.primary_use_case) score += 2;
-
-      const sharedTags = item.tags.filter((tag) => current.tags.includes(tag)).length;
-      score += sharedTags * 3;
-
-      return { item, score };
-    })
-    .filter((entry) => entry.score > 0)
+  const sameCategory = others
+    .filter((item) => item.category === current.category)
     .sort((a, b) => {
-      if (b.score !== a.score) return b.score - a.score;
-      return b.item.created_at.localeCompare(a.item.created_at);
-    })
-    .slice(0, limit)
-    .map((entry) => entry.item);
+      const sharedDiff = countSharedTags(current, b) - countSharedTags(current, a);
+      if (sharedDiff !== 0) return sharedDiff;
+      return sortByNewest(a, b);
+    });
 
-  return scored;
+  const pickedIds = new Set<string>();
+  const result: HackIndexItem[] = [];
+
+  for (const item of sameCategory) {
+    if (result.length >= limit) break;
+    result.push(item);
+    pickedIds.add(item.id);
+  }
+
+  if (result.length < limit) {
+    const fallback = others
+      .filter((item) => !pickedIds.has(item.id))
+      .sort(sortByNewest);
+
+    for (const item of fallback) {
+      if (result.length >= limit) break;
+      result.push(item);
+      pickedIds.add(item.id);
+    }
+  }
+
+  return result;
 }
