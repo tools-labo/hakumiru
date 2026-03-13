@@ -18,10 +18,10 @@ import {
   Megaphone,
   Palette,
 } from "lucide-react";
-import { getPublishedHacks } from "@/app/lib/hacks";
+import { getFeaturedHackIndex } from "@/app/lib/hacks.server";
 
 export default function Home() {
-  const featuredHacks = getPublishedHacks().slice(0, 6);
+  const featuredHacks = getFeaturedHackIndex(6);
 
   const useCaseList = [
     {
@@ -80,7 +80,8 @@ export default function Home() {
                 AIの使い方が<span className="text-primary">みつかる</span>ハック集。
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                何を入力して、どう使い、何ができるか。<br className="hidden md:block" />
+                何を入力して、どう使い、何ができるか。
+                <br className="hidden md:block" />
                 プロンプトと手順つきで、ChatGPTなどのAIの使い方を探せるサイトです。
               </p>
             </div>
@@ -128,32 +129,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-2 max-w-6xl">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
-            カテゴリー
-          </h2>
-          <Link
-            href="/hacks"
-            className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
-          >
-            一覧を見る <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {categoriesList.map((cat) => (
-            <Link key={cat.name} href={`/hacks?category=${cat.name}`}>
-              <div className="bg-white px-4 py-5 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center min-h-[124px]">
-                <div className="w-9 h-9 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-3 group-hover:scale-110 transition-transform">
-                  {cat.icon}
-                </div>
-                <h3 className="font-bold text-sm leading-snug">{cat.name}</h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       <section className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
@@ -191,6 +166,32 @@ export default function Home() {
             公開中のハックはまだありません
           </div>
         )}
+      </section>
+
+      <section className="container mx-auto px-4 py-2 max-w-6xl">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
+            カテゴリー
+          </h2>
+          <Link
+            href="/hacks"
+            className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
+          >
+            一覧を見る <ChevronRight className="w-4 h-4" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {categoriesList.map((cat) => (
+            <Link key={cat.name} href={`/hacks?category=${cat.name}`}>
+              <div className="bg-white px-4 py-5 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center min-h-[124px]">
+                <div className="w-9 h-9 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-3 group-hover:scale-110 transition-transform">
+                  {cat.icon}
+                </div>
+                <h3 className="font-bold text-sm leading-snug">{cat.name}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
     </div>
   );
