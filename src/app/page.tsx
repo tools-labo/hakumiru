@@ -63,12 +63,12 @@ export default function Home() {
   ];
 
   const categoriesList = [
-    { name: "仕事効率化", icon: <Rocket className="w-5 h-5" /> },
-    { name: "文章作成", icon: <FileText className="w-5 h-5" /> },
-    { name: "画像作成", icon: <Sparkles className="w-5 h-5" /> },
-    { name: "動画作成", icon: <Video className="w-5 h-5" /> },
-    { name: "副業・発信", icon: <TrendingUp className="w-5 h-5" /> },
-    { name: "プログラミング・開発", icon: <BrainCircuit className="w-5 h-5" /> },
+    { name: "仕事効率化", icon: <Rocket className="w-4 h-4" /> },
+    { name: "文章作成", icon: <FileText className="w-4 h-4" /> },
+    { name: "画像作成", icon: <Sparkles className="w-4 h-4" /> },
+    { name: "動画作成", icon: <Video className="w-4 h-4" /> },
+    { name: "副業・発信", icon: <TrendingUp className="w-4 h-4" /> },
+    { name: "プログラミング・開発", icon: <BrainCircuit className="w-4 h-4" /> },
   ];
 
   return (
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4 py-2 max-w-6xl">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-7">
           <h2 className="text-xl font-black uppercase tracking-wider text-muted-foreground">
             カテゴリー
           </h2>
@@ -189,14 +189,14 @@ export default function Home() {
             一覧を見る <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {categoriesList.map((cat) => (
             <Link key={cat.name} href={`/hacks?category=${cat.name}`}>
-              <div className="bg-white px-4 py-5 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center min-h-[124px]">
-                <div className="w-9 h-9 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-3 group-hover:scale-110 transition-transform">
+              <div className="bg-white px-3 py-4 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center min-h-[108px]">
+                <div className="w-8 h-8 bg-primary/5 rounded-lg flex items-center justify-center text-primary mb-2.5 group-hover:scale-110 transition-transform">
                   {cat.icon}
                 </div>
-                <h3 className="font-bold text-sm leading-snug">{cat.name}</h3>
+                <h3 className="font-bold text-[13px] leading-snug">{cat.name}</h3>
               </div>
             </Link>
           ))}
