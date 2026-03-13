@@ -98,7 +98,7 @@ export default function Home() {
                 className="h-14 px-10 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
                 asChild
               >
-                <Link href="/hacks" className="flex items-center gap-2">
+                <Link href="/hacks" scroll className="flex items-center gap-2">
                   <Search className="w-5 h-5" />
                   ハックを探す
                 </Link>
@@ -115,6 +115,7 @@ export default function Home() {
           </h2>
           <Link
             href="/hacks"
+            scroll
             className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
           >
             一覧を見る <ChevronRight className="w-4 h-4" />
@@ -123,7 +124,11 @@ export default function Home() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {useCaseList.map((item) => (
-            <Link key={item.key} href={`/hacks?use_case=${item.key}`}>
+            <Link
+              key={item.key}
+              href={`/hacks?use_case=${item.key}`}
+              scroll
+            >
               <div className="bg-white p-5 md:p-6 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center">
                 <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                   {item.icon}
@@ -145,6 +150,7 @@ export default function Home() {
           </h2>
           <Link
             href="/hacks"
+            scroll
             className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
           >
             一覧を見る <ChevronRight className="w-4 h-4" />
@@ -166,7 +172,7 @@ export default function Home() {
                 className="rounded-full px-12 border-2 font-bold"
                 asChild
               >
-                <Link href="/hacks">ハック一覧をもっと見る</Link>
+                <Link href="/hacks" scroll>ハック一覧をもっと見る</Link>
               </Button>
             </div>
           </>
@@ -184,6 +190,7 @@ export default function Home() {
           </h2>
           <Link
             href="/hacks"
+            scroll
             className="text-sm font-bold text-primary hover:underline flex items-center gap-1"
           >
             一覧を見る <ChevronRight className="w-4 h-4" />
@@ -191,7 +198,11 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {categoriesList.map((cat) => (
-            <Link key={cat.name} href={`/hacks?category=${cat.name}`}>
+            <Link
+              key={cat.name}
+              href={`/hacks?category=${cat.name}`}
+              scroll
+            >
               <div className="bg-white px-3 py-4 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center min-h-[108px]">
                 <div className="w-8 h-8 bg-primary/5 rounded-lg flex items-center justify-center text-primary mb-2.5 group-hover:scale-110 transition-transform">
                   {cat.icon}
