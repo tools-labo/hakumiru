@@ -99,5 +99,29 @@
     "status": "published",
     "created_at": "2026-03-11",
     "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0022",
+    "title": "ChatGPTでCTA文を3パターン作る",
+    "summary": "記事内容、読者像、押したい行動をChatGPTに渡し、CTA文を3パターンまとめて作るハック。押しつけがましすぎる、弱すぎる、毎回同じ言い回しになるを減らし、記事の最後に合う導線を選びやすくする。",
+    "category": "副業・発信",
+    "tags": [
+      "CTA文",
+      "記事導線",
+      "ブログ執筆",
+      "アフィリエイト記事",
+      "文章作成",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "make_money",
+    "use_cases": [
+      "make_money",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]

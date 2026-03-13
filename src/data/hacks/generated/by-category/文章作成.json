@@ -116,5 +116,29 @@
     "status": "published",
     "created_at": "2026-03-11",
     "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0023",
+    "title": "ChatGPTでFAQ見出しをまとめて作る",
+    "summary": "記事テーマ、読者の悩み、入れたい情報をChatGPTに渡し、FAQ見出しをまとめて作るハック。記事の後半で何を補足すればよいか分からない、よくある質問を拾いきれないを減らし、検索にも読みやすさにもつながるQ&Aの土台を作りやすくする。",
+    "category": "文章作成",
+    "tags": [
+      "FAQ見出し",
+      "Q&A作成",
+      "ブログ構成",
+      "SEO記事",
+      "記事下書き",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]

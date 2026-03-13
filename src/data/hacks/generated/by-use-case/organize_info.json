@@ -116,5 +116,28 @@
     "status": "published",
     "created_at": "2026-03-11",
     "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0021",
+    "title": "ChatGPTでお礼メール文を作る",
+    "summary": "相手との関係、伝えたいお礼、入れたい一言をChatGPTに渡し、すぐ送れるお礼メール文を作るハック。何を書けばいいか分からない、丁寧すぎて不自然になる、短すぎてそっけなく見えるを減らし、場面に合った文面を早く整えやすくする。",
+    "category": "仕事効率化",
+    "tags": [
+      "お礼メール",
+      "メール文作成",
+      "ビジネスメール",
+      "文章作成",
+      "初心者向け",
+      "仕事効率化"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]
