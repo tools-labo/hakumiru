@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     images: ["/ogp.PNG"],
   },
   icons: {
-    icon: "/hakumiru-icon.png",
-    apple: "/hakumiru-icon.png",
-    shortcut: "/hakumiru-icon.png",
-  },
+  icon: "/icon.png",
+  apple: "/icon.png",
+  shortcut: "/icon.png",
+},
 };
 
 export const viewport: Viewport = {
