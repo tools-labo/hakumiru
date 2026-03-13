@@ -259,5 +259,29 @@
     "status": "published",
     "created_at": "2026-03-13",
     "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0030",
+    "title": "ChatGPTでニュースを3行で要約する",
+    "summary": "ニュース記事や話題の内容をChatGPTに渡し、3行で短く要約するハック。長い記事を全部読む前に要点だけ知りたい、話題の概要だけ素早くつかみたいときに使いやすい。",
+    "category": "仕事効率化",
+    "tags": [
+      "ニュース要約",
+      "3行要約",
+      "記事要約",
+      "情報整理",
+      "初心者向け",
+      "時短"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "plus",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]
