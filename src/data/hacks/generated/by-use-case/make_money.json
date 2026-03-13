@@ -149,5 +149,30 @@
     "status": "published",
     "created_at": "2026-03-11",
     "updated_at": "2026-03-11"
+  },
+  {
+    "id": "hack_0020",
+    "title": "公式ページ2URLからサービスの強み・弱み比較表のたたき台を作る",
+    "summary": "比較したい2サービスの公式URLを入れると、AIが強み・弱み・違い・向いているケースを並べた比較表のたたき台を返すハック。出力時に「要確認」「情報不足」「推測」を分けて出し、人が最後に事実確認しやすい形で初期整理できる。",
+    "category": "仕事効率化",
+    "tags": [
+      "URL比較",
+      "比較表",
+      "公式ページ",
+      "強み・弱み",
+      "サービス比較",
+      "導入検討"
+    ],
+    "difficulty": "intermediate",
+    "plan_requirement": "plus",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "make_money",
+      "write_blog_note"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]
