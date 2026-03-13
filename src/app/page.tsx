@@ -72,7 +72,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50/50 pb-20">
+    <div className="min-h-screen bg-slate-50/50 pb-12">
       <Header />
 
       <section className="bg-white border-b">
@@ -159,7 +159,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-16 text-center">
+            <div className="mt-12 text-center">
               <Button
                 variant="outline"
                 size="lg"
