@@ -27,31 +27,37 @@ export default function Home() {
     {
       key: "write_blog_note",
       name: "ブログやnoteを書く",
+      sub: "見出し・導入文・下書き",
       icon: <PenSquare className="w-5 h-5" />,
     },
     {
       key: "make_money",
       name: "AIで稼ぎたい",
+      sub: "比較記事・販売文・提案文",
       icon: <Wallet className="w-5 h-5" />,
     },
     {
       key: "research_compare",
       name: "調べて比較する",
+      sub: "比較表・違い整理・要点抽出",
       icon: <FolderSearch className="w-5 h-5" />,
     },
     {
       key: "organize_info",
       name: "メモや情報を整理する",
+      sub: "要約・箇条書き・分類整理",
       icon: <NotebookPen className="w-5 h-5" />,
     },
     {
       key: "social_publish",
       name: "SNSや発信に使う",
+      sub: "投稿案・言い換え・再利用",
       icon: <Megaphone className="w-5 h-5" />,
     },
     {
       key: "creative",
       name: "クリエイティブに使う",
+      sub: "画像・動画・表現アイデア",
       icon: <Palette className="w-5 h-5" />,
     },
   ];
@@ -118,11 +124,14 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {useCaseList.map((item) => (
             <Link key={item.key} href={`/hacks?use_case=${item.key}`}>
-              <div className="bg-white p-6 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center">
+              <div className="bg-white p-5 md:p-6 rounded-2xl border hover:border-primary/50 transition-all group hover:shadow-sm h-full flex flex-col items-center text-center">
                 <div className="w-10 h-10 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                   {item.icon}
                 </div>
-                <h3 className="font-bold text-sm leading-snug">{item.name}</h3>
+                <h3 className="font-bold text-sm leading-snug mb-2">{item.name}</h3>
+                <p className="text-[11px] md:text-xs leading-relaxed text-muted-foreground">
+                  {item.sub}
+                </p>
               </div>
             </Link>
           ))}
