@@ -271,6 +271,17 @@ export function HackDetailClient({
                 </div>
               </section>
 
+              {relatedHacks.length > 0 && (
+                <section className="pt-6 border-t space-y-4">
+                  <h2 className="text-lg font-black">関連ハック</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {relatedHacks.map((relatedHack) => (
+                      <HackCard key={relatedHack.id} hack={relatedHack} />
+                    ))}
+                  </div>
+                </section>
+              )}
+
               <div className="pt-6 border-t">
                 <div className="flex flex-wrap gap-2">
                   {hack.tags.map((tag) => (
@@ -285,17 +296,6 @@ export function HackDetailClient({
                   ))}
                 </div>
               </div>
-
-              {relatedHacks.length > 0 && (
-                <section className="pt-6 border-t space-y-4">
-                  <h2 className="text-lg font-black">関連ハック</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {relatedHacks.map((relatedHack) => (
-                      <HackCard key={relatedHack.id} hack={relatedHack} />
-                    ))}
-                  </div>
-                </section>
-              )}
             </div>
           </div>
 
