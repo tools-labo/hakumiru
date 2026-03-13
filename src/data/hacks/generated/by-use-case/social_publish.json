@@ -246,5 +246,30 @@
     "status": "published",
     "created_at": "2026-03-10",
     "updated_at": "2026-03-10"
+  },
+  {
+    "id": "hack_0028",
+    "title": "ChatGPTでキャッチフレーズをつくる",
+    "summary": "商品、サービス、記事、企画の内容をChatGPTに渡し、短いキャッチフレーズ案をまとめて作るハック。何をどう魅力的に言えばいいか分からない、似た表現ばかりになるを減らし、最初の一言を考えやすくする。",
+    "category": "副業・発信",
+    "tags": [
+      "キャッチフレーズ",
+      "コピー作成",
+      "文章作成",
+      "SNS発信",
+      "紹介文",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]

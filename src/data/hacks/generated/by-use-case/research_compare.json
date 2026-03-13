@@ -122,5 +122,78 @@
     "status": "published",
     "created_at": "2026-03-13",
     "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0024",
+    "title": "ChatGPTで長文URLを3行で要約する",
+    "summary": "長い記事や解説ページのURLをChatGPTに渡し、内容を3行で短く要約するハック。読む前にざっくり把握したい、最後まで読むか判断したい、要点だけ先に知りたいときに使いやすい。",
+    "category": "仕事効率化",
+    "tags": [
+      "URL要約",
+      "記事要約",
+      "3行要約",
+      "情報整理",
+      "初心者向け",
+      "時短"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "plus",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0026",
+    "title": "ChatGPTで検索キーワード候補を10個出す",
+    "summary": "調べたいテーマや知りたいことをChatGPTに渡し、検索キーワード候補を10個まとめて出すハック。何で検索すればいいか分からない、似た言い回しが思いつかないを減らし、調べ始めを早くしやすくする。",
+    "category": "仕事効率化",
+    "tags": [
+      "検索キーワード",
+      "キーワード候補",
+      "情報収集",
+      "調べ方",
+      "初心者向け",
+      "時短"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0027",
+    "title": "ChatGPTで口コミを『満足点・不満点・注意点』に分ける",
+    "summary": "複数の口コミやレビュー文をChatGPTに渡し、『満足点・不満点・注意点』に分けて整理するハック。レビューをそのまま読むだけでは見えにくい傾向をつかみやすくし、比較前の下調べを進めやすくする。",
+    "category": "仕事効率化",
+    "tags": [
+      "口コミ整理",
+      "レビュー整理",
+      "満足点",
+      "不満点",
+      "注意点",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "make_money",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]

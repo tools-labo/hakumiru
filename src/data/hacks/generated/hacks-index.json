@@ -554,5 +554,150 @@
     "status": "published",
     "created_at": "2026-03-13",
     "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0024",
+    "title": "ChatGPTで長文URLを3行で要約する",
+    "summary": "長い記事や解説ページのURLをChatGPTに渡し、内容を3行で短く要約するハック。読む前にざっくり把握したい、最後まで読むか判断したい、要点だけ先に知りたいときに使いやすい。",
+    "category": "仕事効率化",
+    "tags": [
+      "URL要約",
+      "記事要約",
+      "3行要約",
+      "情報整理",
+      "初心者向け",
+      "時短"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "plus",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0025",
+    "title": "ChatGPTで専門用語だらけの文章をやさしく言い換える",
+    "summary": "難しい説明文や専門用語が多い文章をChatGPTに渡し、初心者でも読みやすい言葉へ言い換えるハック。意味を大きく変えずに、固い表現や分かりにくい単語をやわらかくし、読むハードルを下げやすくする。",
+    "category": "文章作成",
+    "tags": [
+      "言い換え",
+      "専門用語",
+      "やさしい文章",
+      "文章作成",
+      "初心者向け",
+      "読みやすさ改善"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "write_blog_note",
+    "use_cases": [
+      "write_blog_note",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0026",
+    "title": "ChatGPTで検索キーワード候補を10個出す",
+    "summary": "調べたいテーマや知りたいことをChatGPTに渡し、検索キーワード候補を10個まとめて出すハック。何で検索すればいいか分からない、似た言い回しが思いつかないを減らし、調べ始めを早くしやすくする。",
+    "category": "仕事効率化",
+    "tags": [
+      "検索キーワード",
+      "キーワード候補",
+      "情報収集",
+      "調べ方",
+      "初心者向け",
+      "時短"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0027",
+    "title": "ChatGPTで口コミを『満足点・不満点・注意点』に分ける",
+    "summary": "複数の口コミやレビュー文をChatGPTに渡し、『満足点・不満点・注意点』に分けて整理するハック。レビューをそのまま読むだけでは見えにくい傾向をつかみやすくし、比較前の下調べを進めやすくする。",
+    "category": "仕事効率化",
+    "tags": [
+      "口コミ整理",
+      "レビュー整理",
+      "満足点",
+      "不満点",
+      "注意点",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "make_money",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0028",
+    "title": "ChatGPTでキャッチフレーズをつくる",
+    "summary": "商品、サービス、記事、企画の内容をChatGPTに渡し、短いキャッチフレーズ案をまとめて作るハック。何をどう魅力的に言えばいいか分からない、似た表現ばかりになるを減らし、最初の一言を考えやすくする。",
+    "category": "副業・発信",
+    "tags": [
+      "キャッチフレーズ",
+      "コピー作成",
+      "文章作成",
+      "SNS発信",
+      "紹介文",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0029",
+    "title": "ChatGPTで箇条書きメモから依頼メール文を作る",
+    "summary": "箇条書きメモのまま残っている依頼内容をChatGPTに渡し、送れる依頼メール文へ整えるハック。伝えたいことはあるのに文章にまとまらない、失礼にならない言い方が分からないを減らし、依頼文の下書きを早く作りやすくする。",
+    "category": "仕事効率化",
+    "tags": [
+      "依頼メール",
+      "メール文作成",
+      "箇条書きメモ",
+      "文章作成",
+      "初心者向け",
+      "仕事効率化"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]

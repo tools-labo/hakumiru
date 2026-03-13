@@ -222,5 +222,55 @@
     "status": "published",
     "created_at": "2026-03-13",
     "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0027",
+    "title": "ChatGPTで口コミを『満足点・不満点・注意点』に分ける",
+    "summary": "複数の口コミやレビュー文をChatGPTに渡し、『満足点・不満点・注意点』に分けて整理するハック。レビューをそのまま読むだけでは見えにくい傾向をつかみやすくし、比較前の下調べを進めやすくする。",
+    "category": "仕事効率化",
+    "tags": [
+      "口コミ整理",
+      "レビュー整理",
+      "満足点",
+      "不満点",
+      "注意点",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "research_compare",
+    "use_cases": [
+      "research_compare",
+      "make_money",
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0028",
+    "title": "ChatGPTでキャッチフレーズをつくる",
+    "summary": "商品、サービス、記事、企画の内容をChatGPTに渡し、短いキャッチフレーズ案をまとめて作るハック。何をどう魅力的に言えばいいか分からない、似た表現ばかりになるを減らし、最初の一言を考えやすくする。",
+    "category": "副業・発信",
+    "tags": [
+      "キャッチフレーズ",
+      "コピー作成",
+      "文章作成",
+      "SNS発信",
+      "紹介文",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "social_publish",
+    "use_cases": [
+      "social_publish",
+      "write_blog_note",
+      "make_money"
+    ],
+    "status": "published",
+    "created_at": "2026-03-13",
+    "updated_at": "2026-03-13"
   }
 ]
