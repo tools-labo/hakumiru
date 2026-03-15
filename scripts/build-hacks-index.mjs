@@ -67,6 +67,14 @@ function bootstrapRecordsFromLegacyIfNeeded() {
   );
 }
 
+function getSortDate(item) {
+  return item.updated_at || item.created_at || "";
+}
+
+function sortByLatest(a, b) {
+  return getSortDate(b).localeCompare(getSortDate(a));
+}
+
 function main() {
   bootstrapRecordsFromLegacyIfNeeded();
 
@@ -82,7 +90,9 @@ function main() {
   const records = files.map((file) => readJson(path.join(recordsDir, file)));
   const published = records.filter((hack) => hack.status === "published");
 
-  const index = published.map(toIndexItem);
+  const index = published
+    .map(toIndexItem)
+    .sort(sortByLatest);
 
   writeJson(path.join(generatedDir, "hacks-index.json"), index);
   writeJson(path.join(generatedDir, "hacks-featured.json"), index.slice(0, 6));
