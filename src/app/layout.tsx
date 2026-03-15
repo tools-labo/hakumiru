@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 
@@ -41,10 +42,10 @@ export const metadata: Metadata = {
     images: ["/ogp.PNG"],
   },
   icons: {
-  icon: "/icon.png",
-  apple: "/icon.png",
-  shortcut: "/icon.png",
-},
+    icon: "/icon.png",
+    apple: "/icon.png",
+    shortcut: "/icon.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -60,18 +61,38 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <script
+      </head>
+      <body className="font-body antialiased selection:bg-primary/20 selection:text-primary">
+        <Script
+          id="adsense-script"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4902437373882717"
           crossOrigin="anonymous"
-        ></script>
-      </head>
-      <body className="font-body antialiased selection:bg-primary/20 selection:text-primary">
+          strategy="afterInteractive"
+        />
+        <Script
+          id="ga4-lib"
+          src="https://www.googletagmanager.com/gtag/js?id=G-DV555D4T0S"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DV555D4T0S');
+          `}
+        </Script>
+
         <div className="min-h-screen flex flex-col">
           <div className="flex-1">{children}</div>
           <Footer />
