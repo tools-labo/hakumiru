@@ -49,6 +49,16 @@ export function Footer() {
               <div className="space-y-2 text-sm">
                 <div>
                   <a
+                    href="https://tools-labo.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Tools-LABOホーム
+                  </a>
+                </div>
+                <div>
+                  <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfF73yZ69HH-FASKEYSkp98zM92o4dtQLtiQs7BzLRuwsobfA/viewform?pli=1"
                     target="_blank"
                     rel="noopener noreferrer"
