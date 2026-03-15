@@ -284,5 +284,29 @@
     "status": "published",
     "created_at": "2026-03-13",
     "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0031",
+    "title": "ChatGPTで質問リストを作る方法",
+    "summary": "面談、相談、会議、問い合わせの前に、場面や目的をChatGPTに渡して質問リストを作る方法。聞き漏れを減らし、限られた時間で必要な確認を進めたいときに使いやすい。",
+    "category": "仕事効率化",
+    "tags": [
+      "質問リスト",
+      "面談準備",
+      "相談準備",
+      "確認漏れ防止",
+      "聞き方整理",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info",
+      "research_compare"
+    ],
+    "status": "published",
+    "created_at": "2026-03-14",
+    "updated_at": "2026-03-14"
   }
 ]

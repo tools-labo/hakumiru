@@ -283,5 +283,121 @@
     "status": "published",
     "created_at": "2026-03-13",
     "updated_at": "2026-03-13"
+  },
+  {
+    "id": "hack_0031",
+    "title": "ChatGPTで質問リストを作る方法",
+    "summary": "面談、相談、会議、問い合わせの前に、場面や目的をChatGPTに渡して質問リストを作る方法。聞き漏れを減らし、限られた時間で必要な確認を進めたいときに使いやすい。",
+    "category": "仕事効率化",
+    "tags": [
+      "質問リスト",
+      "面談準備",
+      "相談準備",
+      "確認漏れ防止",
+      "聞き方整理",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info",
+      "research_compare"
+    ],
+    "status": "published",
+    "created_at": "2026-03-14",
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "hack_0032",
+    "title": "ChatGPTでプレゼント案を考える方法",
+    "summary": "相手、関係性、用途、予算、好みをChatGPTに渡し、プレゼント案を考える方法。何を贈ればいいか分からないときに、候補を3〜5個に絞って比較したい場面で使いやすい。",
+    "category": "日常生活",
+    "tags": [
+      "プレゼント選び",
+      "ギフト候補",
+      "予算内で選ぶ",
+      "日常生活",
+      "比較しやすい",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-14",
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "hack_0033",
+    "title": "ChatGPTで冷蔵庫の中身から献立を提案させる方法",
+    "summary": "冷蔵庫の中身、人数、作れる時間、使いたい食材をChatGPTに渡し、今日の献立候補を提案させる方法。何を作るか決まらないときに、余り物を使いながら手軽に決めたい場面で使いやすい。",
+    "category": "日常生活",
+    "tags": [
+      "献立提案",
+      "冷蔵庫の中身",
+      "余り物活用",
+      "時短ごはん",
+      "日常生活",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-14",
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "hack_0034",
+    "title": "ChatGPTで家事のやることリストを作る方法",
+    "summary": "家の状態、使える時間、今日やりたいことをChatGPTに渡し、家事のやることリストを作る方法。何から手をつければいいか分からないときに、今日やる家事を優先順つきで整理したい場面で使いやすい。",
+    "category": "日常生活",
+    "tags": [
+      "家事リスト",
+      "優先順位整理",
+      "時間内で回す",
+      "日常生活",
+      "片付け整理",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-14",
+    "updated_at": "2026-03-14"
+  },
+  {
+    "id": "hack_0035",
+    "title": "ChatGPTで子どもの持ち物チェックリストを作る方法",
+    "summary": "行き先、子どもの年齢、季節、滞在時間、目的をChatGPTに渡し、子どもの持ち物チェックリストを作る方法。何を持てばいいか毎回迷うときに、忘れ物を減らしつつ荷物を増やしすぎない形で整理したい場面で使いやすい。",
+    "category": "日常生活",
+    "tags": [
+      "持ち物チェックリスト",
+      "子どもとの外出",
+      "忘れ物防止",
+      "荷物整理",
+      "日常生活",
+      "初心者向け"
+    ],
+    "difficulty": "beginner",
+    "plan_requirement": "free",
+    "primary_use_case": "organize_info",
+    "use_cases": [
+      "organize_info"
+    ],
+    "status": "published",
+    "created_at": "2026-03-14",
+    "updated_at": "2026-03-14"
   }
 ]
